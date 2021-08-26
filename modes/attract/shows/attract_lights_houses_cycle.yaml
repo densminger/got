@@ -1,0 +1,87 @@
+#show_version=5
+
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: blue
+- duration: 0.2
+  lights:
+    l_baratheon_sigil: yellow
+- duration: 0.2
+  lights:
+    l_lannister_sigil: red
+- duration: 0.2
+  lights:
+    l_tyrell_sigil: green
+- duration: 0.2
+  lights:
+    l_martell_sigil: orange
+- duration: 0.2
+  lights:
+    l_greyjoy_sigil: purple
+- duration: 0.2
+  lights:
+    l_stark_sigil: white
+- duration: 1
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: off
+    l_baratheon_sigil: off
+    l_lannister_sigil: off
+    l_tyrell_sigil: off
+    l_martell_sigil: off
+    l_greyjoy_sigil: off
+    l_stark_sigil: off
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: blue
+    l_baratheon_sigil: yellow
+    l_lannister_sigil: red
+    l_tyrell_sigil: green
+    l_martell_sigil: orange
+    l_greyjoy_sigil: purple
+    l_stark_sigil: white
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: off
+    l_baratheon_sigil: off
+    l_lannister_sigil: off
+    l_tyrell_sigil: off
+    l_martell_sigil: off
+    l_greyjoy_sigil: off
+    l_stark_sigil: off
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: blue
+    l_baratheon_sigil: yellow
+    l_lannister_sigil: red
+    l_tyrell_sigil: green
+    l_martell_sigil: orange
+    l_greyjoy_sigil: purple
+    l_stark_sigil: white
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: off
+    l_baratheon_sigil: off
+    l_lannister_sigil: off
+    l_tyrell_sigil: off
+    l_martell_sigil: off
+    l_greyjoy_sigil: off
+    l_stark_sigil: off
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: blue
+    l_baratheon_sigil: yellow
+    l_lannister_sigil: red
+    l_tyrell_sigil: green
+    l_martell_sigil: orange
+    l_greyjoy_sigil: purple
+    l_stark_sigil: white
+- duration: 0.2
+  lights:
+    l_targaryen_sigil: off
+    l_baratheon_sigil: off
+    l_lannister_sigil: off
+    l_tyrell_sigil: off
+    l_martell_sigil: off
+    l_greyjoy_sigil: off
+    l_stark_sigil: off

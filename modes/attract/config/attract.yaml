@@ -1,0 +1,31 @@
+#config_version=5
+
+event_player:
+  mode_attract_started:
+    - start_attract_display
+    # - test_11
+
+show_player:
+  start_attract_display:
+    # attract_display_loop:
+    #     speed: 1
+    #     action: play
+    # attract_all_lights_show:
+    #     speed: 5
+    #     action: play
+    attract_lights_houses_cycle:
+      speed: 1
+      action: play
+  stop_show:
+    attract_lights_houses_cycle:
+      action: stop
+  start_show:
+    attract_lights_houses_cycle:
+      speed: 1
+      action: play
+
+# show_player:
+#     start_attract_display:
+#         attract_all_lights_show_play:
+#             speed: 5
+#             action: play

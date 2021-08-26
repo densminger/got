@@ -1,0 +1,34 @@
+#config_version=5
+
+hardware:
+  platform: spike
+
+spike:
+  debug: true
+  # bridge_debug: true
+  # bridge_debug_log: /tmp/bridge.log
+  # file_log: full
+  port: /dev/tty.usbserial-FTARZE1K
+  baud: 115200
+  runtime_baud: 2500000
+  flow_control: true
+  nodes: 0, 1, 8, 9, 10, 11, 12
+  max_led_batch_size: 6
+  # oc_time: 20
+  # periodically_query_nodes: True
+  # use_send_key: true
+  wait_times:
+    65: 12
+    128: 1
+  # wait_times:
+  #   20: 100   # setnumledsinputs
+  #   65: 25   # rules are longer now
+  #   67: 15   # make sure we get priority right
+  #   68: 100   # OC is just before priority
+  #   70: 100   # coil mask
+  #   72: 100   # oc time
+  #   112: 100  # configure input
+  #   114: 100  # led mask
+  #   128: 1
+  #   240: 100  # settraffic - this probably causes some lags. we can decrease it later
+  #   241: 100

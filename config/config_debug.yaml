@@ -1,0 +1,13 @@
+#config_version=5
+
+blinkenlights:
+  my_blinkenlight:
+    color_duration: 1s
+    off_when_multiple: false
+    light: l_stark_sigil
+    priority: 1000
+  my_blinkenlight2:
+    cycle_duration: 1s
+    off_when_multiple: false
+    light: l_martell_sigil
+    priority: 1000

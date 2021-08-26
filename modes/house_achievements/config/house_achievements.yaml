@@ -1,0 +1,142 @@
+#config_version=5
+
+mode:
+  start_events: ball_starting
+  priority: 201
+
+event_player:
+  mode_house_achievements_started{device.achievements.stark.state=="disabled"}:
+    - start_mode_stark_qualifier
+  mode_house_achievements_started{device.achievements.lannister.state=="disabled"}:
+    - start_mode_lannister_qualifier
+  mode_house_achievements_started{device.achievements.baratheon.state=="disabled"}:
+    - start_mode_baratheon_qualifier
+  mode_house_achievements_started{device.achievements.tyrell.state=="disabled"}:
+    - start_mode_tyrell_qualifier
+  mode_house_achievements_started{device.achievements.greyjoy.state=="disabled"}:
+    - start_mode_greyjoy_qualifier
+  mode_house_achievements_started{device.achievements.martell.state=="disabled"}:
+    - start_mode_martell_qualifier
+  mode_house_achievements_started{device.achievements.targaryen.state=="disabled"}:
+    - start_mode_targaryen_qualifier
+
+achievements:
+  stark:
+    show_tokens:
+      light: l_stark_sigil
+      color: white
+    sync_ms: 1000
+    enable_events: stark_qualified
+    show_when_enabled: flash_sync_color
+    events_when_enabled: house_ready
+    start_events: stark_started
+    show_when_started: flash_sync_color
+    events_when_started: house_started
+    complete_events: stark_completed
+    show_when_completed: led_color
+    events_when_completed: house_completed
+    reset_events: reset_house_modes
+    restart_on_next_ball_when_started: true
+    start_enabled: false
+  lannister:
+    show_tokens:
+      light: l_lannister_sigil
+      color: red
+    sync_ms: 1000
+    enable_events: lannister_qualified
+    show_when_enabled: flash_sync_color
+    events_when_enabled: house_ready
+    start_events: lannister_started
+    show_when_started: flash_sync_color
+    events_when_started: house_started
+    complete_events: lannister_completed
+    show_when_completed: led_color
+    events_when_completed: house_completed
+    reset_events: reset_house_modes
+    restart_on_next_ball_when_started: true
+    start_enabled: false
+  baratheon:
+    show_tokens:
+      light: l_baratheon_sigil
+      color: yellow
+    sync_ms: 1000
+    enable_events: baratheon_qualified
+    show_when_enabled: flash_sync_color
+    events_when_enabled: house_ready
+    start_events: baratheon_started
+    show_when_started: flash_sync_color
+    events_when_started: house_started
+    complete_events: baratheon_completed
+    show_when_completed: led_color
+    events_when_completed: house_completed
+    reset_events: reset_house_modes
+    restart_on_next_ball_when_started: true
+    start_enabled: false
+  tyrell:
+    show_tokens:
+      light: l_tyrell_sigil
+      color: green
+    sync_ms: 1000
+    enable_events: tyrell_qualified
+    show_when_enabled: flash_sync_color
+    events_when_enabled: house_ready
+    start_events: tyrell_started
+    show_when_started: flash_sync_color
+    events_when_started: house_started
+    complete_events: tyrell_completed
+    show_when_completed: led_color
+    events_when_completed: house_completed
+    reset_events: reset_house_modes
+    restart_on_next_ball_when_started: true
+    start_enabled: false
+  greyjoy:
+    show_tokens:
+      light: l_greyjoy_sigil
+      color: purple
+    sync_ms: 1000
+    enable_events: greyjoy_qualified
+    show_when_enabled: flash_sync_color
+    events_when_enabled: house_ready
+    start_events: greyjoy_started
+    show_when_started: flash_sync_color
+    events_when_started: house_started
+    complete_events: greyjoy_completed
+    show_when_completed: led_color
+    events_when_completed: house_completed
+    reset_events: reset_house_modes
+    restart_on_next_ball_when_started: true
+    start_enabled: false
+  martell:
+    show_tokens:
+      light: l_martell_sigil
+      color: orange
+    sync_ms: 1000
+    enable_events: martell_qualified
+    show_when_enabled: flash_sync_color
+    events_when_enabled: house_ready
+    start_events: martell_started
+    show_when_started: flash_sync_color
+    events_when_started: house_started
+    complete_events: martell_completed
+    show_when_completed: led_color
+    events_when_completed: house_completed
+    reset_events: reset_house_modes
+    restart_on_next_ball_when_started: true
+    start_enabled: false
+  targaryen:
+    show_tokens:
+      light: l_targaryen_sigil
+      color: blue
+    sync_ms: 1000
+    enable_events: targaryen_qualified
+    show_when_enabled: flash_sync_color
+    events_when_enabled: house_ready
+    start_events: targaryen_started
+    show_when_started: flash_sync_color
+    events_when_started: house_started
+    complete_events: targaryen_completed
+    show_when_completed: led_color
+    events_when_completed: house_completed
+    reset_events: reset_house_modes
+    restart_on_next_ball_when_started: true
+    start_enabled: false

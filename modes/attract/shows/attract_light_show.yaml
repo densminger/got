@@ -1,0 +1,32 @@
+#show_version=5
+
+- duration: 1
+  lights:
+    l_targaryen_sigil: red
+    l_stark_sigil: red
+    l_lannister_sigil: ff0000
+- duration: 1
+  lights:
+    l_targaryen_sigil: ff6600
+    l_stark_sigil: ff6600
+    l_lannister_sigil: ff6600
+- duration: 1
+  lights:
+    l_targaryen_sigil: ffcc00
+    l_stark_sigil: ffcc00
+    l_lannister_sigil: ffcc00
+- duration: 1
+  lights:
+    l_targaryen_sigil: lime
+    l_stark_sigil: 00ff00
+    l_lannister_sigil: 00ff00
+- duration: 1
+  lights:
+    l_targaryen_sigil: blue
+    l_stark_sigil: 0000ff
+    l_lannister_sigil: 0000ff
+- duration: 1
+  lights:
+    l_targaryen_sigil: ff00aa
+    l_stark_sigil: ff00aa
+    l_lannister_sigil: ff00aa

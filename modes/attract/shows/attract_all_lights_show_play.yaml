@@ -1,0 +1,8 @@
+#show_version=5
+
+- duration: 1
+  lights:
+    l_extra_ball: white
+- duration: 1
+  lights:
+    l_extra_ball: off

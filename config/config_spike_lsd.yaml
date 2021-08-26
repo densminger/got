@@ -1,0 +1,1165 @@
+#config_version=5
+
+# config_spike_lsd.yaml - (lsd = lights, switches, and drivers)
+
+switches:
+  s_left_flipper:
+    number: 8-2
+    tags: left_flipper
+  s_right_flipper:
+    number: 8-3
+    tags: right_flipper
+  s_right_flipper_eos:
+    number: 8-5
+    type: NC
+  s_left_flipper_eos:
+    number: 8-0
+    type: NC
+  s_left_flipper_upper_playfield:
+    number: 8-6
+  s_right_flipper_upper_playfield:
+    number: 8-7
+  s_trough1:
+    number: 8-14
+  s_trough2:
+    number: 8-13
+  s_trough3:
+    number: 8-12
+  s_trough4:
+    number: 8-11
+  s_trough5:
+    number: 8-10
+  s_trough6:
+    number: 8-9
+  s_trough_jam:
+    number: 8-15
+  s_lockdown_button:
+    number: 1-2
+  s_plunger_lane:
+    number: 9-1
+  s_start:
+    number: 1-11
+    tags: start
+  s_tournament_start:
+    number: 1-12
+    tags: start
+  s_elevator_popper:
+    number: 11-1
+  s_right_inlane:
+    number: 9-6
+    tags: playfield_active
+  s_left_inlane:
+    number: 9-5
+    tags: playfield_active
+  s_left_outlane:
+    number: 9-4
+    tags: playfield_active
+  s_right_outlane:
+    number: 9-7
+    tags: playfield_active
+  s_left_slingshot:
+    number: 8-1
+  s_right_slingshot:
+    number: 8-4
+  s_3bank_drop_top:
+    number: 9-13
+    type: NC
+  s_3bank_drop_middle:
+    number: 9-14
+    type: NC
+  s_3bank_drop_bottom:
+    number: 9-15
+    type: NC
+  s_spinner:
+    number: 10-7
+    tags: playfield_active
+  s_left_loop:
+    number: 10-10
+    tags: playfield_active
+  s_right_loop:
+    number: 10-11
+    tags: playfield_active
+  s_target1:
+    number: 10-8
+    tags: playfield_active
+  s_target2:
+    number: 10-9
+    tags: playfield_active
+  s_target3:
+    number: 10-0
+    tags: playfield_active
+  s_target4:
+    number: 9-8
+    tags: playfield_active
+  s_target5:
+    number: 9-9
+    tags: playfield_active
+  s_kickback:
+    number: 10-14
+  s_left_ramp_entrance:
+    number: 10-5
+    tags: playfield_active
+  s_right_ramp_entrance:
+    number: 11-6
+    tags: playfield_active
+  s_left_ramp_exit:
+    number: 10-6
+    tags: playfield_active
+  s_right_ramp_exit:
+    number: 10-15
+    tags: playfield_active
+  s_battering_ram:
+    number: 10-4
+    tags: playfield_active
+  s_2bank_top:
+    number: 9-10
+    tags: playfield_active
+  s_2bank_bottom:
+    number: 9-11
+    tags: playfield_active
+  s_10points:
+    number: 9-12
+    tags: playfield_active
+  s_lock1:
+    number: 9-0
+  s_lock2:
+    number: 9-2
+  s_lock3:
+    number: 9-3
+  s_left_pop_bumper:
+    number: 10-1
+  s_right_pop_bumper:
+    number: 10-2
+  s_bottom_pop_bumper:
+    number: 10-3
+  s_left_top_lane:
+    number: 10-12
+    tags: playfield_active
+  s_right_top_lane:
+    number: 10-13
+    tags: playfield_active
+  s_left_coin:
+    number: 1-16
+  s_right_coin:
+    number: 1-18
+  s_center_coin:
+    number: 1-17
+  s_fourth_coin:
+    number: 1-19
+  s_fifth_coin:
+    number: 1-20
+  s_sixth_coin:
+    number: 1-21
+  s_tilt_pendulum:
+    number: 1-14
+    tags: tilt_warning
+  s_ticket_notch:
+    number: 1-8
+  s_slam_tilt:
+    number: 1-22
+    tags: tilt
+  s_left_rollover_upper_playfield:
+    number: 11-17
+    tags: upper_playfield_active
+  s_right_rollover_upper_playfield:
+    number: 11-18
+    tags: upper_playfield_active
+  s_left_loop_upper_playfield:
+    number: 11-21
+    tags: upper_playfield_active
+  s_left_target_upper_playfield:
+    number: 11-22
+    tags: upper_playfield_active
+  s_center_target_upper_playfield:
+    number: 11-23
+    tags: upper_playfield_active
+  s_right_target_upper_playfield:
+    number: 11-8
+    tags: upper_playfield_active
+  s_left_lane_upper_playfield:
+    number: 11-9
+    tags: upper_playfield_active
+  s_right_lane_upper_playfield:
+    number: 11-19
+    tags: upper_playfield_active
+  s_left_10points_upper_playfield:
+    number: 11-10
+    tags: upper_playfield_active
+  s_right_10points_upper_playfield:
+    number: 11-20
+    tags: upper_playfield_active
+  s_dragon_home:
+    number: 11-4
+  s_throne:
+    number: 11-7
+  s_1bank_drop:
+    number: 11-3
+    type: NC
+    tags: playfield_active
+  s_dip1:
+    number: 0-0
+  s_dip2:
+    number: 0-1
+  s_dip3:
+    number: 0-2
+  s_dip4:
+    number: 0-3
+  s_dip5:
+    number: 0-4
+  s_dip6:
+    number: 0-5
+  s_dip7:
+    number: 0-6
+  s_dip8:
+    number: 0-7
+  s_service_plus:
+    number: 0-9
+  s_service_minus:
+    number: 0-10
+  s_service_back:
+    number: 0-11
+  s_service_select:
+    number: 0-8
+  s_dc_sense:
+    number: 0-16
+
+coils:
+  c_left_flipper_main:
+    number: 8-0
+    allow_enable: true
+    default_pulse_ms: 35
+    default_hold_power: 0.125
+  c_right_flipper_main:
+    number: 8-5
+    allow_enable: true
+    default_pulse_ms: 35
+    default_hold_power: 0.125
+  c_left_flipper_upper_playfield:
+    number: 8-6
+    allow_enable: true
+    default_pulse_ms: 35
+    default_hold_power: 0.125
+  c_right_flipper_upper_playfield:
+    number: 8-7
+    allow_enable: true
+    default_pulse_ms: 35
+    default_hold_power: 0.125
+  c_trough_eject:
+    number: 9-2
+    default_pulse_ms: 25
+  c_plunger:
+    number: 9-1
+    default_pulse_ms: 20
+  c_elevator_popper:
+    number: 11-1
+    default_pulse_ms: 35
+  c_left_slingshot:
+    number: 8-1
+    default_pulse_ms: 20
+  c_right_slingshot:
+    number: 8-4
+    default_pulse_ms: 20
+  c_shaker_motor:
+    number: 1-0
+  c_left_pop_bummper:
+    number: 10-1
+    default_pulse_ms: 20
+  c_right_pop_bumper:
+    number: 10-2
+    default_pulse_ms: 20
+  c_bottom_pop_bumper:
+    number: 10-3
+    default_pulse_ms: 20
+  c_3bank_drop_reset:
+    number: 8-2
+  c_kickback:
+    number: 8-3
+  c_lock_release_post:
+    number: 9-3
+    default_pulse_ms: 32
+    default_hold_power: 0.1
+    allow_enable: true
+  c_sword:
+    number: 9-0
+    default_pulse_ms: 500
+  c_left_right_control_gates:
+    number: 10-0
+  c_elevator_diverter:
+    number: 11-0
+  c_throne:
+    number: 11-7
+  c_loop_diverter:
+    number: 11-6
+  c_1bank_drop_reset:
+    number: 11-5
+  c_1bank_drop_trip:
+    number: 11-3
+  c_coin_meter:
+    number: 1-2
+  c_ticket_meter:
+    number: 1-3
+  c_ticket_dispenser:
+    number: 1-4
+
+autofire_coils:
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_slingshot
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_slingshot
+  left_pop_bumper:
+    coil: c_left_pop_bummper
+    switch: s_left_pop_bumper
+  right_pop_bumper:
+    coil: c_right_pop_bumper
+    switch: s_right_pop_bumper
+  bottom_pop_bumper:
+    coil: c_bottom_pop_bumper
+    switch: s_bottom_pop_bumper
+  # can't set the kickback as an autofire coil, because the switch and the coil aren't on the same node
+  #kickback:
+  #    coil: c_kickback
+  #    switch: s_kickback
+
+lights:
+  l_backbox:
+    channels:
+      white:
+        number: 0-0
+    tags: backbox
+  l_coin_enable:
+    channels:
+      white:
+        number: 1-0
+  l_start:
+    channels:
+      white:
+        number: 1-2
+  l_tournament_start:
+    channels:
+      white:
+        number: 1-3
+  l_lockdown_button:
+    channels:
+      red:
+        number: 1-5
+      green:
+        number: 1-4
+      blue:
+        number: 1-7
+  l_left_outlane:
+    channels:
+      red:
+        number: 8-17
+      green:
+        number: 8-18
+      blue:
+        number: 8-19
+  l_left_inlane:
+    channels:
+      red:
+        number: 8-20
+      green:
+        number: 8-21
+      blue:
+        number: 8-22
+  l_3bank_drop_bottom:
+    channels:
+      red:
+        number: 10-32
+      green:
+        number: 10-48
+      blue:
+        number: 10-12
+  l_3bank_drop_middle:
+    channels:
+      red:
+        number: 10-13
+      green:
+        number: 10-14
+      blue:
+        number: 10-15
+  l_3bank_drop_top:
+    channels:
+      red:
+        number: 11-1
+      green:
+        number: 11-2
+      blue:
+        number: 11-3
+  l_3bank_sigil:
+    channels:
+      red:
+        number: 8-0
+      green:
+        number: 8-1
+      blue:
+        number: 8-2
+  l_hand_of_the_king:
+    channels:
+      red:
+        number: 8-14
+      green:
+        number: 8-15
+      blue:
+        number: 8-16
+  l_targaryen_sigil:
+    channels:
+      red:
+        number: 8-11
+      green:
+        number: 8-12
+      blue:
+        number: 8-13
+  l_iron_throne:
+    channels:
+      red:
+        number: 8-8
+      green:
+        number: 8-9
+      blue:
+        number: 8-10
+  l_stark_sigil:
+    channels:
+      red:
+        number: 8-29
+      green:
+        number: 8-30
+      blue:
+        number: 8-31
+  l_baratheon_sigil:
+    channels:
+      red:
+        number: 8-26
+      green:
+        number: 8-27
+      blue:
+        number: 8-28
+  l_lannister_sigil:
+    channels:
+      red:
+        number: 8-23
+      green:
+        number: 8-24
+      blue:
+        number: 8-25
+  l_greyjoy_sigil:
+    channels:
+      red:
+        number: 8-38
+      green:
+        number: 8-39
+      blue:
+        number: 8-40
+  l_tyrell_sigil:
+    channels:
+      red:
+        number: 8-47
+      green:
+        number: 8-48
+      blue:
+        number: 8-49
+  l_martell_sigil:
+    channels:
+      red:
+        number: 8-44
+      green:
+        number: 8-45
+      blue:
+        number: 8-46
+  l_2x:
+    # debug: true
+    channels:
+      red:
+        number: 8-35
+      green:
+        number: 8-36
+      blue:
+        number: 8-37
+  l_3x:
+    channels:
+      red:
+        number: 8-50
+      green:
+        number: 8-51
+      blue:
+        number: 8-52
+  l_4x:
+    channels:
+      red:
+        number: 8-32
+      green:
+        number: 8-33
+      blue:
+        number: 8-34
+  l_5x:
+    channels:
+      red:
+        number: 8-53
+      green:
+        number: 8-54
+      blue:
+        number: 8-55
+  l_shoot_again:
+    channels:
+      red:
+        number: 8-41
+      green:
+        number: 8-42
+      blue:
+        number: 8-43
+  l_right_inlane:
+    channels:
+      red:
+        number: 9-10
+      green:
+        number: 9-11
+      blue:
+        number: 9-12
+  l_right_outlane:
+    channels:
+      red:
+        number: 9-13
+      green:
+        number: 9-14
+      blue:
+        number: 9-15
+  l_2bank_sigil:
+    channels:
+      red:
+        number: 9-7
+      green:
+        number: 9-8
+      blue:
+        number: 9-9
+  l_2bank_top:
+    channels:
+      red:
+        number: 9-1
+      green:
+        number: 9-2
+      blue:
+        number: 9-3
+  l_2bank_bottom:
+    channels:
+      red:
+        number: 9-4
+      green:
+        number: 9-5
+      blue:
+        number: 9-6
+  l_left_loop_sigil:
+    channels:
+      red:
+        number: 10-36
+      green:
+        number: 10-37
+      blue:
+        number: 10-38
+  l_left_loop_arrow:
+    channels:
+      red:
+        number: 10-33
+      green:
+        number: 10-34
+      blue:
+        number: 10-35
+  l_standup_target1:
+    channels:
+      red:
+        number: 10-19
+      green:
+        number: 10-20
+      blue:
+        number: 10-21
+  l_castle_black:
+    channels:
+      red:
+        number: 10-16
+      green:
+        number: 10-17
+      blue:
+        number: 10-18
+  l_kickback_sigil:
+    channels:
+      red:
+        number: 10-28
+      green:
+        number: 10-29
+      blue:
+        number: 10-30
+  l_kickback_arrow:
+    channels:
+      red:
+        number: 10-42
+      green:
+        number: 10-43
+      blue:
+        number: 10-44
+  l_dragon_fire:
+    channels:
+      red:
+        number: 11-0
+  l_standup_target2:
+    channels:
+      red:
+        number: 10-39
+      green:
+        number: 10-40
+      blue:
+        number: 10-41
+  l_choose_your_battle:
+    channels:
+      red:
+        number: 10-22
+      green:
+        number: 10-23
+      blue:
+        number: 10-24
+  l_lock_arrow:
+    channels:
+      red:
+        number: 10-25
+      green:
+        number: 10-26
+      blue:
+        number: 10-27
+  l_left_ramp_sigil:
+    channels:
+      red:
+        number: 10-45
+      green:
+        number: 10-46
+      blue:
+        number: 10-47
+  l_left_ramp_arrow:
+    channels:
+      red:
+        number: 10-52
+      green:
+        number: 10-53
+      blue:
+        number: 10-54
+  l_standup_target3:
+    channels:
+      red:
+        number: 10-49
+      green:
+        number: 10-50
+      blue:
+        number: 10-51
+  l_playfield_multiplier:
+    channels:
+      red:
+        number: 9-52
+      green:
+        number: 9-53
+      blue:
+        number: 9-54
+  l_wildfire:
+    channels:
+      red:
+        number: 9-49
+      green:
+        number: 9-50
+      blue:
+        number: 9-51
+  l_super_jackpot:
+    channels:
+      red:
+        number: 9-45
+      green:
+        number: 9-46
+      blue:
+        number: 9-47
+  l_battering_ram_arrow:
+    channels:
+      red:
+        number: 10-55
+      green:
+        number: 10-56
+      blue:
+        number: 10-57
+  l_standup_target4:
+    channels:
+      red:
+        number: 10-58
+      green:
+        number: 10-59
+      blue:
+        number: 10-60
+  l_swords:
+    channels:
+      red:
+        number: 9-57
+      green:
+        number: 9-58
+      blue:
+        number: 9-59
+  l_right_ramp_sigil:
+    channels:
+      red:
+        number: 9-29
+      green:
+        number: 9-30
+      blue:
+        number: 9-31
+  l_right_ramp_arrow:
+    channels:
+      red:
+        number: 9-33
+      green:
+        number: 9-34
+      blue:
+        number: 9-35
+  l_standup_target5:
+    channels:
+      red:
+        number: 9-25
+      green:
+        number: 9-26
+      blue:
+        number: 9-27
+  l_extra_ball:
+    channels:
+      red:
+        number: 9-60
+      green:
+        number: 9-61
+      blue:
+        number: 9-62
+  l_mystery:
+    channels:
+      red:
+        number: 9-16
+      green:
+        number: 9-17
+      blue:
+        number: 9-18
+  l_right_loop_sigil:
+    channels:
+      red:
+        number: 9-19
+      green:
+        number: 9-20
+      blue:
+        number: 9-21
+  l_right_loop_arrow:
+    channels:
+      red:
+        number: 9-22
+      green:
+        number: 9-23
+      blue:
+        number: 9-24
+  l_left_top_lane:
+    channels:
+      red:
+        number: 9-36
+      green:
+        number: 9-37
+      blue:
+        number: 9-38
+  l_right_top_lane:
+    channels:
+      red:
+        number: 9-39
+      green:
+        number: 9-40
+      blue:
+        number: 9-41
+  l_left_pop_bumper:
+    channels:
+      red:
+        number: 10-1
+      green:
+        number: 10-2
+      blue:
+        number: 10-3
+  l_right_pop_bumper:
+    channels:
+      red:
+        number: 10-4
+      green:
+        number: 10-5
+      blue:
+        number: 10-6
+  l_bottom_pop_bumper:
+    channels:
+      red:
+        number: 10-7
+      green:
+        number: 10-8
+      blue:
+        number: 10-9
+  l_left_rollover_upper_playfield:
+    channels:
+      red:
+        number: 11-46
+      green:
+        number: 11-47
+      blue:
+        number: 11-48
+  l_right_rollover_upper_playfield:
+    channels:
+      red:
+        number: 11-49
+      green:
+        number: 11-50
+      blue:
+        number: 11-51
+  l_left_loop_upper_playfield:
+    channels:
+      red:
+        number: 11-25
+      green:
+        number: 11-26
+      blue:
+        number: 11-27
+  l_left_target_upper_playfield:
+    channels:
+      red:
+        number: 11-28
+      green:
+        number: 11-29
+      blue:
+        number: 11-30
+  l_center_target_upper_playfield:
+    channels:
+      red:
+        number: 11-34
+      green:
+        number: 11-35
+      blue:
+        number: 11-36
+  l_right_target_upper_playfield:
+    channels:
+      red:
+        number: 11-37
+      green:
+        number: 11-38
+      blue:
+        number: 11-39
+  l_sigil_upper_playfield:
+    channels:
+      red:
+        number: 11-52
+      green:
+        number: 11-53
+      blue:
+        number: 11-54
+  l_castle_multiball_upper_playfield:
+    channels:
+      red:
+        number: 11-43
+      green:
+        number: 11-44
+      blue:
+        number: 11-45
+  l_breach_upper_playfield:
+    channels:
+      red:
+        number: 11-31
+      green:
+        number: 11-32
+      blue:
+        number: 11-33
+  l_charge_upper_playfield:
+    channels:
+      red:
+        number: 11-19
+      green:
+        number: 11-20
+      blue:
+        number: 11-21
+  l_arrows_upper_playfield:
+    channels:
+      red:
+        number: 11-16
+      green:
+        number: 11-17
+      blue:
+        number: 11-18
+  l_2x_upper_playfield:
+    channels:
+      red:
+        number: 11-22
+      green:
+        number: 11-23
+      blue:
+        number: 11-24
+  l_3x_upper_playfield:
+    channels:
+      red:
+        number: 11-40
+      green:
+        number: 11-41
+      blue:
+        number: 11-42
+  l_right_flood_upper_playfield:
+    channels:
+      red:
+        number: 11-10
+      green:
+        number: 11-11
+      blue:
+        number: 11-12
+  l_left_flood_upper_playfield:
+    channels:
+      red:
+        number: 11-13
+      green:
+        number: 11-14
+      blue:
+        number: 11-15
+  l_coin_door_gi:
+    channels:
+      white:
+        number: 1-1
+  l_lower_playfield_gi:
+    channels:
+      white:
+        number: 8-4
+    tags: gi
+  l_left_playfield_gi:
+    channels:
+      white:
+        number: 9-0
+    tags: gi
+  l_upper_right_playfield_gi:
+    channels:
+      white:
+        number: 10-0
+    tags: gi
+  l_sword_lock_flasher:
+    channels:
+      white:
+        number: 9-28
+  l_right_ramp_flasher:
+    channels:
+      white:
+        number: 9-42
+  l_pop_bumpers_flasher:
+    channels:
+      white:
+        number: 9-43
+  l_left_loop_flasher:
+    channels:
+      white:
+        number: 10-31
+  l_battering_ram_flasher:
+    channels:
+      white:
+        number: 9-44
+  l_slingshots_flasher:
+    channels:
+      white:
+        number: 8-3
+  l_throne_flasher:
+    channels:
+      white:
+        number: 11-4
+
+steppers:
+  stepper1:
+    number: 10-0
+    homing_mode: switch
+    homing_switch: s_dragon_home
+    platform_settings:
+      speed: 20
+      light_number: 10-10
+      named_positions:
+        0: move_stepper_to_0
+        1: move_stepper_to_1
+        2: move_stepper_to_2
+        3: move_stepper_to_3
+        4: move_stepper_to_4
+        5: move_stepper_to_5
+        6: move_stepper_to_6
+        7: move_stepper_to_7
+        8: move_stepper_to_8
+        9: move_stepper_to_9
+        10: move_stepper_to_10
+        23: move_stepper_to_23
+        125: move_stepper_to_125
+        80: move_stepper_to_80
+        180: move_stepper_to_180
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1,s_trough2,s_trough3,s_trough4,s_trough5,s_trough6,s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 1500ms
+    debug: yes
+  bd_plunger:
+    ball_switches: s_plunger_lane
+    eject_coil: c_plunger
+    mechanical_eject: true
+    player_controlled_eject_event: s_lockdown_button_active
+    eject_timeouts: 3s
+  bd_elevator_popper:
+    ball_switches: s_elevator_popper
+    eject_coil: c_elevator_popper
+    eject_timeouts: 3s
+  bd_throne:
+    ball_switches: s_throne
+    eject_coil: c_throne
+    eject_timeouts: 1s
+  bd_lock:
+    ball_switches: s_lock1, s_lock2, s_lock3
+    eject_coil: c_lock_release_post
+    eject_timeouts: 3s
+    exit_count_delay: 2s
+    eject_coil_enable_time: 0.5s
+
+coil_player:
+  balldevice_bd_lock_ejecting_ball: c_sword
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_plunger
+  upper_playfield:
+    default_source_device: bd_elevator_popper
+
+flippers:
+  left_flipper:
+    main_coil: c_left_flipper_main
+    activation_switch: s_left_flipper
+    eos_switch: s_left_flipper_eos
+    use_eos: true
+  right_flipper:
+    main_coil: c_right_flipper_main
+    activation_switch: s_right_flipper
+    eos_switch: s_right_flipper_eos
+    use_eos: true
+  left_flipper_upper_playfield:
+    main_coil: c_left_flipper_upper_playfield
+    activation_switch: s_left_flipper_upper_playfield
+    eos_switch: s_left_flipper_eos
+    use_eos: true
+  right_flipper_upper_playfield:
+    main_coil: c_right_flipper_upper_playfield
+    activation_switch: s_right_flipper_upper_playfield
+    eos_switch: s_right_flipper_eos
+    use_eos: true
+
+displays:
+  dmd:
+    width: 128
+    height: 32
+    default: true
+
+window:
+  width: 800
+  height: 200
+  title: DMD
+  effects:
+    - type: dmd
+
+dmds:
+  my_dmd:
+    platform: spike
+    fps: 20
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+
+# slide_player:
+#     init_done: welcome_slide
+
+event_player:
+  game_will_start: gi_on
+  game_ended: gi_off
+
+light_player:
+  init_done:
+    backbox: on
+  gi_on:
+    gi:
+      color: DDDDDD
+  gi_off:
+    gi:
+      color: black
+
+modes:
+  - base
+  - house_achievements
+  - greyjoy_qualifier
+  - martell_qualifier
+  - house_ready
+
+keyboard:
+  z:
+    switch: s_left_flipper
+  x:
+    switch: s_right_flipper
+  s:
+    switch: s_start
+  q:
+    switch: s_right_inlane
+  l:
+    switch: s_lockdown_button
+  # 1:
+  #     switch: s_trough1
+  #     toggle: true
+  b:
+    switch: s_battering_ram
+  a:
+    switch: s_left_loop
+  d:
+    switch: s_right_loop
+  1:
+    event: test_event_1
+  2:
+    event: test_event_2
+  3:
+    event: test_event_3
+  4:
+    event: test_event_4
+  5:
+    event: test_event_5
+  6:
+    event: test_event_6
+  7:
+    event: stop_show
+  8:
+    event: start_show
+  9:
+    event: move_stepper_to_80
+  0:
+    event: move_stepper_to_180
+  "!":
+    event: move_stepper_to_0
+  "@":
+    event: move_stepper_to_1
+  "#":
+    event: move_stepper_to_2
+  "$":
+    event: move_stepper_to_3
+  "%":
+    event: move_stepper_to_4
+  "^":
+    event: move_stepper_to_5
+  "&":
+    event: move_stepper_to_6
+  "*":
+    event: move_stepper_to_7
+  "(":
+    event: move_stepper_to_8
+  ")":
+    event: move_stepper_to_9
+  "_":
+    event: move_stepper_to_10
+
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
+

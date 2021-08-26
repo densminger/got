@@ -1,0 +1,14 @@
+#config_version=5
+
+mode:
+  start_events: house_ready
+  stop_events: house_started
+  priority: 200
+
+show_player:
+  mode_house_ready_started:
+    flash_sync_color:
+      sync_ms: 1000
+      show_tokens:
+        light: l_choose_your_battle
+        color: white

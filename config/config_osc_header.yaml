@@ -1,0 +1,8 @@
+#config_version=5
+
+hardware:
+  platform: osc
+
+osc:
+  ip: 192.168.1.76
+  port: 8000

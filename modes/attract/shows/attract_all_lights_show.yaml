@@ -1,0 +1,253 @@
+#show_version=5
+
+- duration: 1
+  lights:
+    l_backbox: on
+    l_coin_enable: on
+    l_start: on
+    l_tournament_start: on
+    l_lockdown_button: red
+    l_left_outlane: red
+    l_left_inlane: red
+    l_3bank_drop_bottom: red
+    l_3bank_drop_middle: red
+    l_3bank_drop_top: red
+    l_3bank_sigil: red
+    l_hand_of_the_king: red
+    l_iron_throne: red
+    # l_targaryen_sigil: red
+    # l_stark_sigil: red
+    # l_baratheon_sigil: red
+    # l_lannister_sigil: red
+    # l_greyjoy_sigil: red
+    # l_tyrell_sigil: red
+    # l_martell_sigil: red
+    l_2x: red
+    l_3x: red
+    l_4x: red
+    l_5x: red
+    l_shoot_again: red
+    l_right_inlane: red
+    l_right_outlane: red
+    l_2bank_sigil: red
+    l_2bank_top: red
+    l_2bank_bottom: red
+    l_left_loop_sigil: red
+    l_left_loop_arrow: red
+    l_standup_target1: red
+    l_castle_black: red
+    l_kickback_sigil: red
+    l_kickback_arrow: red
+    l_dragon_fire: red
+    l_standup_target2: red
+    l_choose_your_battle: red
+    l_lock_arrow: red
+    l_left_ramp_sigil: red
+    l_left_ramp_arrow: red
+    l_standup_target3: red
+    l_playfield_multiplier: red
+    l_wildfire: red
+    l_super_jackpot: red
+    l_battering_ram_arrow: red
+    l_standup_target4: red
+    l_swords: red
+    l_right_ramp_sigil: red
+    l_right_ramp_arrow: red
+    l_standup_target5: red
+    l_extra_ball: red
+    l_mystery: red
+    l_right_loop_sigil: red
+    l_right_loop_arrow: red
+    l_left_top_lane: red
+    l_right_top_lane: red
+    l_left_pop_bumper: red
+    l_right_pop_bumper: red
+    l_bottom_pop_bumper: red
+    l_left_rollover_upper_playfield: red
+    l_right_rollover_upper_playfield: red
+    l_left_loop_upper_playfield: red
+    l_left_target_upper_playfield: red
+    l_center_target_upper_playfield: red
+    l_right_target_upper_playfield: red
+    l_sigil_upper_playfield: red
+    l_castle_multiball_upper_playfield: red
+    l_breach_upper_playfield: red
+    l_charge_upper_playfield: red
+    l_arrows_upper_playfield: red
+    l_2x_upper_playfield: red
+    l_3x_upper_playfield: red
+    l_right_flood_upper_playfield: red
+    l_left_flood_upper_playfield: red
+    l_coin_door_gi: on
+    l_lower_playfield_gi: on
+    l_left_playfield_gi: on
+    l_upper_right_playfield_gi: on
+    l_sword_lock_flasher: on
+    l_right_ramp_flasher: on
+    l_pop_bumpers_flasher: on
+    l_left_loop_flasher: on
+    l_battering_ram_flasher: on
+    l_slingshots_flasher: on
+    l_throne_flasher: on
+- duration: 1
+  lights:
+    l_coin_enable: off
+    l_start: off
+    l_tournament_start: off
+    l_lockdown_button: green
+    l_left_outlane: green
+    l_left_inlane: green
+    l_3bank_drop_bottom: green
+    l_3bank_drop_middle: green
+    l_3bank_drop_top: green
+    l_3bank_sigil: green
+    l_hand_of_the_king: green
+    l_iron_throne: green
+    # l_targaryen_sigil: green
+    # l_stark_sigil: green
+    # l_baratheon_sigil: green
+    # l_lannister_sigil: green
+    # l_greyjoy_sigil: green
+    # l_tyrell_sigil: green
+    # l_martell_sigil: green
+    l_2x: green
+    l_3x: green
+    l_4x: green
+    l_5x: green
+    l_shoot_again: green
+    l_right_inlane: green
+    l_right_outlane: green
+    l_2bank_sigil: green
+    l_2bank_top: green
+    l_2bank_bottom: green
+    l_left_loop_sigil: green
+    l_left_loop_arrow: green
+    l_standup_target1: green
+    l_castle_black: green
+    l_kickback_sigil: green
+    l_kickback_arrow: green
+    l_dragon_fire: green
+    l_standup_target2: green
+    l_choose_your_battle: green
+    l_lock_arrow: green
+    l_left_ramp_sigil: green
+    l_left_ramp_arrow: green
+    l_standup_target3: green
+    l_playfield_multiplier: green
+    l_wildfire: green
+    l_super_jackpot: green
+    l_battering_ram_arrow: green
+    l_standup_target4: green
+    l_swords: green
+    l_right_ramp_sigil: green
+    l_right_ramp_arrow: green
+    l_standup_target5: green
+    l_extra_ball: green
+    l_mystery: green
+    l_right_loop_sigil: green
+    l_right_loop_arrow: green
+    l_left_top_lane: green
+    l_right_top_lane: green
+    l_left_pop_bumper: green
+    l_right_pop_bumper: green
+    l_bottom_pop_bumper: green
+    l_left_rollover_upper_playfield: green
+    l_right_rollover_upper_playfield: green
+    l_left_loop_upper_playfield: green
+    l_left_target_upper_playfield: green
+    l_center_target_upper_playfield: green
+    l_right_target_upper_playfield: green
+    l_sigil_upper_playfield: green
+    l_castle_multiball_upper_playfield: green
+    l_breach_upper_playfield: green
+    l_charge_upper_playfield: green
+    l_arrows_upper_playfield: green
+    l_2x_upper_playfield: green
+    l_3x_upper_playfield: green
+    l_right_flood_upper_playfield: green
+    l_left_flood_upper_playfield: green
+    l_coin_door_gi: off
+    l_lower_playfield_gi: off
+    l_left_playfield_gi: off
+    l_upper_right_playfield_gi: off
+    l_sword_lock_flasher: off
+    l_right_ramp_flasher: off
+    l_pop_bumpers_flasher: off
+    l_left_loop_flasher: off
+    l_battering_ram_flasher: off
+    l_slingshots_flasher: off
+    l_throne_flasher: off
+- duration: 1
+  lights:
+    l_lockdown_button: blue
+    l_left_outlane: blue
+    l_left_inlane: blue
+    l_3bank_drop_bottom: blue
+    l_3bank_drop_middle: blue
+    l_3bank_drop_top: blue
+    l_3bank_sigil: blue
+    l_hand_of_the_king: blue
+    l_iron_throne: blue
+    # l_targaryen_sigil: blue
+    # l_stark_sigil: blue
+    # l_baratheon_sigil: blue
+    # l_lannister_sigil: blue
+    # l_greyjoy_sigil: blue
+    # l_tyrell_sigil: blue
+    # l_martell_sigil: blue
+    l_2x: blue
+    l_3x: blue
+    l_4x: blue
+    l_5x: blue
+    l_shoot_again: blue
+    l_right_inlane: blue
+    l_right_outlane: blue
+    l_2bank_sigil: blue
+    l_2bank_top: blue
+    l_2bank_bottom: blue
+    l_left_loop_sigil: blue
+    l_left_loop_arrow: blue
+    l_standup_target1: blue
+    l_castle_black: blue
+    l_kickback_sigil: blue
+    l_kickback_arrow: blue
+    l_dragon_fire: blue
+    l_standup_target2: blue
+    l_choose_your_battle: blue
+    l_lock_arrow: blue
+    l_left_ramp_sigil: blue
+    l_left_ramp_arrow: blue
+    l_standup_target3: blue
+    l_playfield_multiplier: blue
+    l_wildfire: blue
+    l_super_jackpot: blue
+    l_battering_ram_arrow: blue
+    l_standup_target4: blue
+    l_swords: blue
+    l_right_ramp_sigil: blue
+    l_right_ramp_arrow: blue
+    l_standup_target5: blue
+    l_extra_ball: blue
+    l_mystery: blue
+    l_right_loop_sigil: blue
+    l_right_loop_arrow: blue
+    l_left_top_lane: blue
+    l_right_top_lane: blue
+    l_left_pop_bumper: blue
+    l_right_pop_bumper: blue
+    l_bottom_pop_bumper: blue
+    l_left_rollover_upper_playfield: blue
+    l_right_rollover_upper_playfield: blue
+    l_left_loop_upper_playfield: blue
+    l_left_target_upper_playfield: blue
+    l_center_target_upper_playfield: blue
+    l_right_target_upper_playfield: blue
+    l_sigil_upper_playfield: blue
+    l_castle_multiball_upper_playfield: blue
+    l_breach_upper_playfield: blue
+    l_charge_upper_playfield: blue
+    l_arrows_upper_playfield: blue
+    l_2x_upper_playfield: blue
+    l_3x_upper_playfield: blue
+    l_right_flood_upper_playfield: blue
+    l_left_flood_upper_playfield: blue

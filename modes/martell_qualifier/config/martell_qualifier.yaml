@@ -1,0 +1,30 @@
+#config_version=5
+
+mode:
+  start_events: start_mode_martell_qualifier
+  stop_events: stop_mode_martell_qualifier
+  priority: 200
+
+counters:
+  martell_shot_counter:
+    count_events: s_right_loop_active
+    events_when_hit: martell_hit
+    count_complete_value: 3
+    events_when_complete: martell_qualified, stop_mode_martell_qualifier
+    persist_state: true
+    enable_events: balldevice_bd_plunger_ball_eject_success, start_mode_martell_qualifier
+    disable_events: balldevice_bd_plunger_ejecting_ball
+
+
+light_player:
+  mode_martell_qualifier_started:
+    l_right_loop_sigil:
+      color: orange
+
+variable_player:
+  martell_hit{device.counters.martell_shot_counter.value == 1 and device.counters.martell_shot_counter.enabled}:
+    score: 100000
+  martell_hit{device.counters.martell_shot_counter.value == 2 and device.counters.martell_shot_counter.enabled}:
+    score: 200000
+  martell_qualified{device.counters.martell_shot_counter.enabled}:
+    score: 300000

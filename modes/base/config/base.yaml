@@ -1,0 +1,155 @@
+#config_version=5
+
+mode:
+  start_events: ball_starting
+  priority: 100
+
+slide_player:
+  mode_base_started:
+    widgets:
+      - type: text
+        text: (score)
+        number_grouping: true
+        min_digits: 2
+      - type: text
+        text: PLAYER (number)
+        y: 1
+        x: 1
+        font_size: 8
+        anchor_x: left
+        anchor_y: bottom
+      - type: text
+        text: BALL (ball)
+        y: 1
+        x: right-1
+        font_size: 8
+        anchor_x: right
+        anchor_y: bottom
+
+# STUFF TO TEST BLINKENLIGHTS
+# blinkenlight_player:
+#   test_event_1:
+#     my_blinkenlight:
+#       action: add
+#       key: mykey1
+#       color: gray
+#     my_blinkenlight2:
+#       action: add
+#       key: mykey1
+#       color: green
+#   test_event_2:
+#     my_blinkenlight:
+#       action: add
+#       key: mykey2
+#       color: red
+#     my_blinkenlight2:
+#       action: add
+#       key: mykey2
+#       color: white
+#   test_event_3:
+#     my_blinkenlight:
+#       action: add
+#       key: mykey3
+#       color: purple
+#     my_blinkenlight2:
+#       action: add
+#       key: mykey3
+#       color: yellow
+#   test_event_4:
+#     my_blinkenlight:
+#       action: remove
+#       key: mykey1
+#     my_blinkenlight2:
+#       action: remove
+#       key: mykey1
+#   test_event_5:
+#     my_blinkenlight:
+#       action: remove
+#       key: mykey2
+#     my_blinkenlight2:
+#       action: remove
+#       key: mykey2
+#   test_event_6:
+#     my_blinkenlight:
+#       action: remove_all
+#     my_blinkenlight2:
+#       action: remove_all
+# END STUFF TO TEST BLINKENLIGHTS
+
+ball_holds:
+  choose_house_mode:
+    hold_devices: bd_lock
+    enable_events: house_ready
+    disable_events: house_started
+
+shows:
+  flash_sync_color:
+    - time: 0
+      lights:
+        (light): (color)
+    - time: 0.5
+      lights:
+        (light): off
+    - time: 1
+
+shots:
+  shot_pop_bumper:
+    switches: s_left_pop_bumper, s_right_pop_bumper, s_bottom_pop_bumper
+  shot_slingshot:
+    switches: s_left_slingshot, s_right_slingshot
+  shot_inlane:
+    switches: s_left_inlane, s_right_inlane
+  shot_outlane:
+    switches: s_left_outlane, s_right_outlane
+  shot_gold_target:
+    switches: s_target1, s_target2, s_target3, s_target4, s_target5
+  shot_2bank:
+    switches: s_2bank_top, s_2bank_bottom
+  shot_3bank:
+    switches: s_3bank_drop_top, s_3bank_drop_middle, s_3bank_drop_bottom
+  shot_any_upper_playfield:
+    switches: s_left_rollover_upper_playfield, s_right_rollover_upper_playfield, s_left_loop_upper_playfield, s_left_target_upper_playfield, s_center_target_upper_playfield, s_right_target_upper_playfield, s_left_lane_upper_playfield, s_right_lane_upper_playfield, s_left_10points_upper_playfield, s_right_10points_upper_playfield
+  shot_any_lock:
+    switches: s_lock1, s_lock2, s_lock3
+  shot_top_lane:
+    switches: s_left_top_lane, s_right_top_lane
+
+variable_player:
+  shot_pop_bumper_hit:
+    score: 1170
+  shot_slingshot_hit:
+    score: 170
+  shot_inlane_hit:
+    score: 530
+  shot_outlane_hit:
+    score: 25000
+  shot_gold_target_hit:
+    score: 30
+  shot_2bank_hit:
+    score: 230
+  shot_3bank_hit:
+    score: 330
+  s_battering_ram_active:
+    score: 2330
+  s_right_loop_active:
+    score: 30
+  s_left_loop_active:
+    score: 30
+  s_1bank_drop_active:
+    score: 30
+  shot_any_upper_playfield_hit:
+    score: 30
+  s_kickback_active:
+    score: 3330
+  shot_any_lock_hit:
+    score: 30
+  s_spinner_active:
+    score: 970 # + spinner_value
+  s_right_ramp_entrance_active:
+    score: 30
+  s_right_ramp_exit_active:
+    score: 1070
+  s_left_ramp_entrance_active:
+    score: 30
+  shot_top_lane_hit:
+    score: 1230

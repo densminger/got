@@ -1,0 +1,10 @@
+.env
+.vscode
+a.a
+data
+logs
+monitor.backup
+monitor/logs
+monster_bash.txt
+osc
+out.out
