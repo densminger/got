@@ -1,8 +1,8 @@
 #config_version=5
 
 mode:
-  start_events: start_mode_greyjoy_qualifier
-  stop_events: stop_mode_greyjoy_qualifier
+  start_events: start_qualifiers{device.achievements.greyjoy.state=="disabled"}
+  stop_events: stop_mode_greyjoy_qualifier, stop_qualifiers
   priority: 200
 
 counters:
@@ -14,6 +14,8 @@ counters:
     direction: up
     events_when_complete: greyjoy_qualified, stop_mode_greyjoy_qualifier
     persist_state: true
+    disable_on_complete: false
+    reset_on_complete: false
 
 light_player:
   mode_greyjoy_qualifier_started:

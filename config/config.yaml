@@ -4,3 +4,36 @@ config:
   - config_spike_header.yaml
   - config_spike_lsd.yaml
   - config_debug.yaml
+
+player_vars:
+  house_running_count:
+    initial_value: 0
+
+modes:
+  - base
+  - house_achievements
+  - greyjoy_qualifier
+  - martell_qualifier
+  - stark_qualifier
+  - house_select
+  - targaryen
+  - stark
+  - martell
+  - greyjoy
+  - baratheon
+  - tyrell
+  - lannister
+
+widget_styles:
+  small_top:
+    font_size: 10
+    anchor_y: top
+    y: top
+  small_middle:
+    font_size: 10
+    anchor_y: center
+    y: center
+  small_bottom:
+    font_size: 10
+    anchor_y: bottom
+    y: bottom

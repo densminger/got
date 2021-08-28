@@ -5,6 +5,12 @@ mode:
   stop_events: stop_stark
   events_when_started: stark_started
   events_when_stopped: stark_completed, house_completed
+  priority: 300
 
 event_player:
   mode_stark_started: stop_stark
+
+light_player:
+  mode_stark_started:
+    shot_sigils: off
+    house_sigils: off

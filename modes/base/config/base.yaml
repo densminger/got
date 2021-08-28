@@ -85,6 +85,8 @@ ball_holds:
 
 event_player:
   ball_hold_choose_house_mode_held_ball: start_house_select
+  house_started: stop_qualifiers
+  player_house_running_count{value==0}: start_qualifiers
 
 shows:
   flash_sync_color:
@@ -157,3 +159,11 @@ variable_player:
     score: 30
   shot_top_lane_hit:
     score: 1230
+  house_started:
+    house_running_count:
+      int: 1
+      action: add
+  house_completed:
+    house_running_count:
+      int: -1
+      action: add

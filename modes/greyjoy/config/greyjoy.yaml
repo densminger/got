@@ -5,6 +5,17 @@ mode:
   stop_events: stop_greyjoy
   events_when_started: greyjoy_started
   events_when_stopped: greyjoy_completed, house_completed
+  priority: 300
 
-event_player:
-  mode_greyjoy_started: stop_greyjoy
+counters:
+  # temporary counter for testing
+  debug_greyjoy_slingshot_counter:
+    count_events: s_left_slingshot_active
+    count_complete_value: 3
+    events_when_complete: stop_greyjoy
+    start_enabled: true
+
+light_player:
+  mode_greyjoy_started:
+    shot_sigils: off
+    house_sigils: off

@@ -5,6 +5,12 @@ mode:
   stop_events: stop_tyrell
   events_when_started: tyrell_started
   events_when_stopped: tyrell_completed, house_completed
+  priority: 300
 
 event_player:
   mode_tyrell_started: stop_tyrell
+
+light_player:
+  mode_tyrell_started:
+    shot_sigils: off
+    house_sigils: off

@@ -5,6 +5,12 @@ mode:
   stop_events: stop_targaryen
   events_when_started: targaryen_started
   events_when_stopped: targaryen_completed, house_completed
+  priority: 300
 
 event_player:
   mode_targaryen_started: stop_targaryen
+
+light_player:
+  mode_targaryen_started:
+    shot_sigils: off
+    house_sigils: off

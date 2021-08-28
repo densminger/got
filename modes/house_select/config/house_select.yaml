@@ -3,7 +3,7 @@
 mode:
   start_events: start_house_select
   stop_events: house_started, house_select_cancelled
-  priority: 202
+  priority: 300
   code: mpf.modes.carousel.code.carousel.Carousel
 
 mode_settings:
@@ -268,6 +268,7 @@ shows:
   single_selection_show:
     - time: 0
       lights:
+        house_sigils: off
         (sigil_light): (sigil_color)
       slides:
         (selection_slide)
@@ -275,6 +276,7 @@ shows:
   dual_selection_show:
     - time: 0
       lights:
+        house_sigils: off
         (sigil_light1): (sigil_color1)
         (sigil_light2): (sigil_color2)
       slides:
@@ -282,6 +284,8 @@ shows:
     - duration: -1
   pass_for_now_show:
     - time: 0
+      lights:
+        house_sigils: off
       slides:
         pass_for_now_slide
     - duration: -1
@@ -289,203 +293,274 @@ shows:
 slides:
   targaryen_slide:
     type: text
+    style: small_middle
     text: House Targaryen
   martell_slide:
     type: text
+    style: small_middle
     text: House Martell
   baratheon_slide:
     type: text
+    style: small_middle
     text: House Baratheon
   tyrell_slide:
     type: text
+    style: small_middle
     text: House Tyrell
   lannister_slide:
     type: text
+    style: small_middle
     text: House Lannister
   stark_slide:
     type: text
+    style: small_middle
     text: House Stark
   greyjoy_slide:
     type: text
+    style: small_middle
     text: House Greyjoy
   targaryen_martell_slide:
     - type: text
       text: House Targaryen
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Martell
+      style: small_bottom
   targaryen_baratheon_slide:
     - type: text
       text: House Targaryen
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Baratheon
+      style: small_bottom
   targaryen_tyrell_slide:
     - type: text
       text: House Targaryen
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Tyrell
+      style: small_bottom
   targaryen_lannister_slide:
     - type: text
       text: House Targaryen
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Lannister
+      style: small_bottom
   targaryen_stark_slide:
     - type: text
       text: House Targaryen
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Stark
+      style: small_bottom
   targaryen_greyjoy_slide:
     - type: text
       text: House Targaryen
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Greyjoy
+      style: small_bottom
   martell_baratheon_slide:
     - type: text
       text: House Martell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Baratheon
+      style: small_bottom
   martell_tyrell_slide:
     - type: text
       text: House Martell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Tyrell
+      style: small_bottom
   martell_lannister_slide:
     - type: text
       text: House Martell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Lannister
+      style: small_bottom
   martell_stark_slide:
     - type: text
       text: House Martell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Stark
+      style: small_bottom
   martell_greyjoy_slide:
     - type: text
       text: House Martell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Greyjoy
+      style: small_bottom
   baratheon_tyrell_slide:
     - type: text
       text: House Baratheon
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Tyrell
+      style: small_bottom
   baratheon_lannister_slide:
     - type: text
       text: House Baratheon
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Lannister
+      style: small_bottom
   baratheon_stark_slide:
     - type: text
       text: House Baratheon
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Stark
+      style: small_bottom
   baratheon_greyjoy_slide:
     - type: text
       text: House Baratheon
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Greyjoy
+      style: small_bottom
   tyrell_lannister_slide:
     - type: text
       text: House Tyrell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Lannister
+      style: small_bottom
   tyrell_stark_slide:
     - type: text
       text: House Tyrell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Stark
+      style: small_bottom
   tyrell_greyjoy_slide:
     - type: text
       text: House Tyrell
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Greyjoy
+      style: small_bottom
   lannister_stark_slide:
     - type: text
       text: House Lannister
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Stark
+      style: small_bottom
   lannister_greyjoy_slide:
     - type: text
       text: House Lannister
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Greyjoy
+      style: small_bottom
   stark_greyjoy_slide:
     - type: text
       text: House Stark
+      style: small_top
     - type: text
       text: "- in alliance with -"
+      style: small_middle
     - type: text
       text: House Greyjoy
+      style: small_bottom
   pass_for_now_slide:
     type: text
     text: Pass For Now
+    style: small_middle
 
 event_player:
-  house_select_targaryen_selected: start_targaryen, house_started
-  house_select_martell_selected: start_martell, house_started
-  house_select_baratheon_selected: start_baratheon, house_started
-  house_select_tyrell_selected: start_tyrell, house_started
-  house_select_lannister_selected: start_lannister, house_started
-  house_select_stark_selected: start_stark, house_started
-  house_select_greyjoy_selected: start_greyjoy, house_started
-  house_select_targaryen_martell_selected: start_targaryen, start_martell, house_started
-  house_select_targaryen_baratheon_selected: start_targaryen, start_baratheon, house_started
-  house_select_targaryen_tyrell_selected: start_targaryen, start_tyrell, house_started
-  house_select_targaryen_lannister_selected: start_targaryen, start_lannister, house_started
-  house_select_targaryen_stark_selected: start_targaryen, start_stark, house_started
-  house_select_targaryen_greyjoy_selected: start_targaryen, start_greyjoy, house_started
-  house_select_martell_baratheon_selected: start_martell, start_baratheon, house_started
-  house_select_martell_tyrell_selected: start_martell, start_tyrell, house_started
-  house_select_martell_lannister_selected: start_martell, start_lannister, house_started
-  house_select_martell_stark_selected: start_martell, start_stark, house_started
-  house_select_martell_greyjoy_selected: start_martell, start_greyjoy, house_started
-  house_select_baratheon_tyrell_selected: start_baratheon, start_tyrell, house_started
-  house_select_baratheon_lannister_selected: start_baratheon, start_lannister, house_started
-  house_select_baratheon_stark_selected: start_baratheon, start_stark, house_started
-  house_select_baratheon_greyjoy_selected: start_baratheon, start_greyjoy, house_started
-  house_select_tyrell_lannister_selected: start_tyrell, start_lannister, house_started
-  house_select_tyrell_stark_selected: start_tyrell, start_stark, house_started
-  house_select_tyrell_greyjoy_selected: start_tyrell, start_greyjoy, house_started
-  house_select_lannister_stark_selected: start_lannister, start_stark, house_started
-  house_select_lannister_greyjoy_selected: start_lannister, start_greyjoy, house_started
-  house_select_stark_greyjoy_selected: start_stark, start_greyjoy, house_started
+  house_select_targaryen_selected: start_targaryen
+  house_select_martell_selected: start_martell
+  house_select_baratheon_selected: start_baratheon
+  house_select_tyrell_selected: start_tyrell
+  house_select_lannister_selected: start_lannister
+  house_select_stark_selected: start_stark
+  house_select_greyjoy_selected: start_greyjoy
+  house_select_targaryen_martell_selected: start_targaryen, start_martell
+  house_select_targaryen_baratheon_selected: start_targaryen, start_baratheon
+  house_select_targaryen_tyrell_selected: start_targaryen, start_tyrell
+  house_select_targaryen_lannister_selected: start_targaryen, start_lannister
+  house_select_targaryen_stark_selected: start_targaryen, start_stark
+  house_select_targaryen_greyjoy_selected: start_targaryen, start_greyjoy
+  house_select_martell_baratheon_selected: start_martell, start_baratheon
+  house_select_martell_tyrell_selected: start_martell, start_tyrell
+  house_select_martell_lannister_selected: start_martell, start_lannister
+  house_select_martell_stark_selected: start_martell, start_stark
+  house_select_martell_greyjoy_selected: start_martell, start_greyjoy
+  house_select_baratheon_tyrell_selected: start_baratheon, start_tyrell
+  house_select_baratheon_lannister_selected: start_baratheon, start_lannister
+  house_select_baratheon_stark_selected: start_baratheon, start_stark
+  house_select_baratheon_greyjoy_selected: start_baratheon, start_greyjoy
+  house_select_tyrell_lannister_selected: start_tyrell, start_lannister
+  house_select_tyrell_stark_selected: start_tyrell, start_stark
+  house_select_tyrell_greyjoy_selected: start_tyrell, start_greyjoy
+  house_select_lannister_stark_selected: start_lannister, start_stark
+  house_select_lannister_greyjoy_selected: start_lannister, start_greyjoy
+  house_select_stark_greyjoy_selected: start_stark, start_greyjoy
   house_select_pass_for_now_selected: house_select_cancelled

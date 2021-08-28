@@ -5,6 +5,12 @@ mode:
   stop_events: stop_baratheon
   events_when_started: baratheon_started
   events_when_stopped: baratheon_completed, house_completed
+  priority: 300
 
 event_player:
   mode_baratheon_started: stop_baratheon
+
+light_player:
+  mode_baratheon_started:
+    shot_sigils: off
+    house_sigils: off

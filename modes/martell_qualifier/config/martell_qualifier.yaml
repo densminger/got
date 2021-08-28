@@ -1,8 +1,8 @@
 #config_version=5
 
 mode:
-  start_events: start_mode_martell_qualifier
-  stop_events: stop_mode_martell_qualifier
+  start_events: start_qualifiers{device.achievements.martell.state=="disabled"}
+  stop_events: stop_mode_martell_qualifier, stop_qualifiers
   priority: 200
 
 counters:
@@ -14,7 +14,8 @@ counters:
     persist_state: true
     enable_events: balldevice_bd_plunger_ball_eject_success, start_mode_martell_qualifier
     disable_events: balldevice_bd_plunger_ejecting_ball
-
+    disable_on_complete: false
+    reset_on_complete: false
 
 light_player:
   mode_martell_qualifier_started:

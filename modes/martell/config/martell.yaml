@@ -5,6 +5,20 @@ mode:
   stop_events: stop_martell
   events_when_started: martell_started
   events_when_stopped: house_completed, martell_completed
+  priority: 300
 
-event_player:
-  mode_martell_started: stop_martell
+# event_player:
+#   mode_martell_started: stop_martell
+
+counters:
+  # temporary counter for testing
+  debug_martell_slingshot_counter:
+    count_events: s_right_slingshot_active
+    count_complete_value: 3
+    events_when_complete: stop_martell
+    start_enabled: true
+
+light_player:
+  mode_martell_started:
+    shot_sigils: off
+    house_sigils: off

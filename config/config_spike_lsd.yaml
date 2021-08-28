@@ -396,6 +396,7 @@ lights:
         number: 8-1
       blue:
         number: 8-2
+    tags: shot_sigils
   l_hand_of_the_king:
     channels:
       red:
@@ -540,6 +541,7 @@ lights:
         number: 9-8
       blue:
         number: 9-9
+    tags: shot_sigils
   l_2bank_top:
     channels:
       red:
@@ -564,6 +566,7 @@ lights:
         number: 10-37
       blue:
         number: 10-38
+    tags: shot_sigils
   l_left_loop_arrow:
     channels:
       red:
@@ -596,6 +599,7 @@ lights:
         number: 10-29
       blue:
         number: 10-30
+    tags: shot_sigils
   l_kickback_arrow:
     channels:
       red:
@@ -624,6 +628,7 @@ lights:
         number: 10-23
       blue:
         number: 10-24
+    tags: shot_sigils
   l_lock_arrow:
     channels:
       red:
@@ -640,6 +645,7 @@ lights:
         number: 10-46
       blue:
         number: 10-47
+    tags: shot_sigils
   l_left_ramp_arrow:
     channels:
       red:
@@ -712,6 +718,7 @@ lights:
         number: 9-30
       blue:
         number: 9-31
+    tags: shot_sigils
   l_right_ramp_arrow:
     channels:
       red:
@@ -752,6 +759,7 @@ lights:
         number: 9-20
       blue:
         number: 9-21
+    tags: shot_sigils
   l_right_loop_arrow:
     channels:
       red:
@@ -1096,20 +1104,6 @@ light_player:
   gi_off:
     gi:
       color: black
-
-modes:
-  - base
-  - house_achievements
-  - greyjoy_qualifier
-  - martell_qualifier
-  - house_select
-  - targaryen
-  - stark
-  - martell
-  - greyjoy
-  - baratheon
-  - tyrell
-  - lannister
 
 keyboard:
   z:
