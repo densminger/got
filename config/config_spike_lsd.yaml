@@ -412,6 +412,7 @@ lights:
         number: 8-12
       blue:
         number: 8-13
+    tags: house_sigils
   l_iron_throne:
     channels:
       red:
@@ -428,6 +429,7 @@ lights:
         number: 8-30
       blue:
         number: 8-31
+    tags: house_sigils
   l_baratheon_sigil:
     channels:
       red:
@@ -436,6 +438,7 @@ lights:
         number: 8-27
       blue:
         number: 8-28
+    tags: house_sigils
   l_lannister_sigil:
     channels:
       red:
@@ -444,6 +447,7 @@ lights:
         number: 8-24
       blue:
         number: 8-25
+    tags: house_sigils
   l_greyjoy_sigil:
     channels:
       red:
@@ -452,6 +456,7 @@ lights:
         number: 8-39
       blue:
         number: 8-40
+    tags: house_sigils
   l_tyrell_sigil:
     channels:
       red:
@@ -460,6 +465,7 @@ lights:
         number: 8-48
       blue:
         number: 8-49
+    tags: house_sigils
   l_martell_sigil:
     channels:
       red:
@@ -468,6 +474,7 @@ lights:
         number: 8-45
       blue:
         number: 8-46
+    tags: house_sigils
   l_2x:
     # debug: true
     channels:
@@ -1095,7 +1102,14 @@ modes:
   - house_achievements
   - greyjoy_qualifier
   - martell_qualifier
-  - house_ready
+  - house_select
+  - targaryen
+  - stark
+  - martell
+  - greyjoy
+  - baratheon
+  - tyrell
+  - lannister
 
 keyboard:
   z:

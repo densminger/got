@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: start_tyrell
+  stop_events: stop_tyrell
+  events_when_started: tyrell_started
+  events_when_stopped: tyrell_completed, house_completed
+
+event_player:
+  mode_tyrell_started: stop_tyrell

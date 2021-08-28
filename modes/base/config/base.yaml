@@ -80,7 +80,11 @@ ball_holds:
   choose_house_mode:
     hold_devices: bd_lock
     enable_events: house_ready
-    disable_events: house_started
+    disable_events: house_started, house_select_cancelled
+    release_one_events: house_started, house_select_cancelled
+
+event_player:
+  ball_hold_choose_house_mode_held_ball: start_house_select
 
 shows:
   flash_sync_color:

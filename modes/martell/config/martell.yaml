@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: start_martell
+  stop_events: stop_martell
+  events_when_started: martell_started
+  events_when_stopped: house_completed, martell_completed
+
+event_player:
+  mode_martell_started: stop_martell

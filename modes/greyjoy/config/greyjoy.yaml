@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: start_greyjoy
+  stop_events: stop_greyjoy
+  events_when_started: greyjoy_started
+  events_when_stopped: greyjoy_completed, house_completed
+
+event_player:
+  mode_greyjoy_started: stop_greyjoy

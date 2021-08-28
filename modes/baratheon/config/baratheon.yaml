@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: start_baratheon
+  stop_events: stop_baratheon
+  events_when_started: baratheon_started
+  events_when_stopped: baratheon_completed, house_completed
+
+event_player:
+  mode_baratheon_started: stop_baratheon

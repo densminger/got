@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: start_targaryen
+  stop_events: stop_targaryen
+  events_when_started: targaryen_started
+  events_when_stopped: targaryen_completed, house_completed
+
+event_player:
+  mode_targaryen_started: stop_targaryen

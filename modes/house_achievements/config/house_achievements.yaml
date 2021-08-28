@@ -1,6 +1,8 @@
 #config_version=5
 
 mode:
+#   start_events: ball_starting, house_completed, house_select_cancelled
+#   stop_events: start_house_select
   start_events: ball_starting
   priority: 201
 
@@ -19,6 +21,10 @@ event_player:
     - start_mode_martell_qualifier
   mode_house_achievements_started{device.achievements.targaryen.state=="disabled"}:
     - start_mode_targaryen_qualifier
+  house_started{device.achievements.stark.state!="enabled" and device.achievements.martell.state!="enabled" and device.achievements.tyrell.state!="enabled" and device.achievements.targaryen.state!="enabled" and device.achievements.lannister.state!="enabled" and device.achievements.baratheon.state!="enabled" and device.achievements.greyjoy.state!="enabled"}:
+    - house_not_ready
+  house_completed{device.achievements.stark.state=="enabled" or device.achievements.martell.state=="enabled" or device.achievements.tyrell.state=="enabled" or device.achievements.targaryen.state=="enabled" or device.achievements.lannister.state=="enabled" or device.achievements.baratheon.state=="enabled" or device.achievements.greyjoy.state=="enabled"}:
+    - house_ready
 
 achievements:
   stark:
@@ -34,7 +40,6 @@ achievements:
     events_when_started: house_started
     complete_events: stark_completed
     show_when_completed: led_color
-    events_when_completed: house_completed
     reset_events: reset_house_modes
     restart_on_next_ball_when_started: true
     start_enabled: false
@@ -51,7 +56,6 @@ achievements:
     events_when_started: house_started
     complete_events: lannister_completed
     show_when_completed: led_color
-    events_when_completed: house_completed
     reset_events: reset_house_modes
     restart_on_next_ball_when_started: true
     start_enabled: false
@@ -68,7 +72,6 @@ achievements:
     events_when_started: house_started
     complete_events: baratheon_completed
     show_when_completed: led_color
-    events_when_completed: house_completed
     reset_events: reset_house_modes
     restart_on_next_ball_when_started: true
     start_enabled: false
@@ -85,7 +88,6 @@ achievements:
     events_when_started: house_started
     complete_events: tyrell_completed
     show_when_completed: led_color
-    events_when_completed: house_completed
     reset_events: reset_house_modes
     restart_on_next_ball_when_started: true
     start_enabled: false
@@ -102,7 +104,6 @@ achievements:
     events_when_started: house_started
     complete_events: greyjoy_completed
     show_when_completed: led_color
-    events_when_completed: house_completed
     reset_events: reset_house_modes
     restart_on_next_ball_when_started: true
     start_enabled: false
@@ -119,7 +120,6 @@ achievements:
     events_when_started: house_started
     complete_events: martell_completed
     show_when_completed: led_color
-    events_when_completed: house_completed
     reset_events: reset_house_modes
     restart_on_next_ball_when_started: true
     start_enabled: false
@@ -136,7 +136,30 @@ achievements:
     events_when_started: house_started
     complete_events: targaryen_completed
     show_when_completed: led_color
-    events_when_completed: house_completed
     reset_events: reset_house_modes
     restart_on_next_ball_when_started: true
     start_enabled: false
+
+show_player:
+  house_ready:
+    flash_sync_color:
+      action: play
+      key: flash_house_ready
+      sync_ms: 1000
+      show_tokens:
+        light: l_choose_your_battle
+        color: white
+  house_not_ready:
+    flash_sync_color:
+      action: stop
+      key: flash_house_ready
+
+# variable_player:
+#   house_ready:
+#     house_is_ready:
+#       action: set
+#       string: true
+#   house_not_ready:
+#     house_is_ready:
+#       action: set
+#       string: false

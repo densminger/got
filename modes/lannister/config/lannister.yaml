@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: start_lannister
+  stop_events: stop_lannister
+  events_when_started: lannister_started
+  events_when_stopped: lannister_completed, house_completed
+
+event_player:
+  mode_lannister_started: stop_lannister

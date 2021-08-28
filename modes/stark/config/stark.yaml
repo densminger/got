@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: start_stark
+  stop_events: stop_stark
+  events_when_started: stark_started
+  events_when_stopped: stark_completed, house_completed
+
+event_player:
+  mode_stark_started: stop_stark

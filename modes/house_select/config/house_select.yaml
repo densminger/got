@@ -1,0 +1,491 @@
+#config_version=5
+
+mode:
+  start_events: start_house_select
+  stop_events: house_started, house_select_cancelled
+  priority: 202
+  code: mpf.modes.carousel.code.carousel.Carousel
+
+mode_settings:
+  selectable_items:
+    - targaryen{device.achievements.targaryen.state=="enabled"}
+    - martell{device.achievements.martell.state=="enabled"}
+    - baratheon{device.achievements.baratheon.state=="enabled"}
+    - tyrell{device.achievements.tyrell.state=="enabled"}
+    - lannister{device.achievements.lannister.state=="enabled"}
+    - stark{device.achievements.stark.state=="enabled"}
+    - greyjoy{device.achievements.greyjoy.state=="enabled"}
+    - targaryen_martell{device.achievements.targaryen.state=="enabled" and device.achievements.martell.state=="enabled"}
+    - targaryen_baratheon{device.achievements.targaryen.state=="enabled" and device.achievements.baratheon.state=="enabled"}
+    - targaryen_tyrell{device.achievements.targaryen.state=="enabled" and device.achievements.tyrell.state=="enabled"}
+    - targaryen_lannister{device.achievements.targaryen.state=="enabled" and device.achievements.lannister.state=="enabled"}
+    - targaryen_stark{device.achievements.targaryen.state=="enabled" and device.achievements.stark.state=="enabled"}
+    - targaryen_greyjoy{device.achievements.targaryen.state=="enabled" and device.achievements.greyjoy.state=="enabled"}
+    - martell_baratheon{device.achievements.martell.state=="enabled" and device.achievements.baratheon.state=="enabled"}
+    - martell_tyrell{device.achievements.martell.state=="enabled" and device.achievements.tyrell.state=="enabled"}
+    - martell_lannister{device.achievements.martell.state=="enabled" and device.achievements.lannister.state=="enabled"}
+    - martell_stark{device.achievements.martell.state=="enabled" and device.achievements.stark.state=="enabled"}
+    - martell_greyjoy{device.achievements.martell.state=="enabled" and device.achievements.greyjoy.state=="enabled"}
+    - baratheon_tyrell{device.achievements.baratheon.state=="enabled" and device.achievements.tyrell.state=="enabled"}
+    - baratheon_lannister{device.achievements.baratheon.state=="enabled" and device.achievements.lannister.state=="enabled"}
+    - baratheon_stark{device.achievements.baratheon.state=="enabled" and device.achievements.stark.state=="enabled"}
+    - baratheon_greyjoy{device.achievements.baratheon.state=="enabled" and device.achievements.greyjoy.state=="enabled"}
+    - tyrell_lannister{device.achievements.tyrell.state=="enabled" and device.achievements.lannister.state=="enabled"}
+    - tyrell_stark{device.achievements.tyrell.state=="enabled" and device.achievements.stark.state=="enabled"}
+    - tyrell_greyjoy{device.achievements.tyrell.state=="enabled" and device.achievements.greyjoy.state=="enabled"}
+    - lannister_stark{device.achievements.lannister.state=="enabled" and device.achievements.stark.state=="enabled"}
+    - lannister_greyjoy{device.achievements.lannister.state=="enabled" and device.achievements.greyjoy.state=="enabled"}
+    - stark_greyjoy{device.achievements.stark.state=="enabled" and device.achievements.greyjoy.state=="enabled"}
+    - pass_for_now
+  select_item_events: s_lockdown_button_inactive
+  next_item_events: s_right_flipper_inactive
+  previous_item_events: s_left_flipper_inactive
+
+light_player:
+  mode_house_select_started:
+    house_sigils: off
+    l_choose_your_battle: off
+
+show_player:
+  house_select_targaryen_highlighted:
+    single_selection_show:
+      show_tokens:
+        sigil_light: l_targaryen_sigil
+        sigil_color: blue
+        selection_slide: targaryen_slide
+  house_select_martell_highlighted:
+    single_selection_show:
+      key: abc
+      show_tokens:
+        sigil_light: l_martell_sigil
+        sigil_color: orange
+        selection_slide: martell_slide
+  house_select_baratheon_highlighted:
+    single_selection_show:
+      show_tokens:
+        sigil_light: l_baratheon_sigil
+        sigil_color: yellow
+        selection_slide: baratheon_slide
+  house_select_tyrell_highlighted:
+    single_selection_show:
+      show_tokens:
+        sigil_light: l_tyrell_sigil
+        sigil_color: green
+        selection_slide: tyrell_slide
+  house_select_lannister_highlighted:
+    single_selection_show:
+      show_tokens:
+        sigil_light: l_lannister_sigil
+        sigil_color: red
+        selection_slide: lannister_slide
+  house_select_stark_highlighted:
+    single_selection_show:
+      show_tokens:
+        sigil_light: l_stark_sigil
+        sigil_color: white
+        selection_slide: stark_slide
+  house_select_greyjoy_highlighted:
+    single_selection_show:
+      key: abc
+      show_tokens:
+        sigil_light: l_greyjoy_sigil
+        sigil_color: purple
+        selection_slide: greyjoy_slide
+  house_select_targaryen_martell_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_targaryen_sigil
+        sigil_color1: blue
+        sigil_light2: l_martell_sigil
+        sigil_color2: orange
+        selection_slide: targaryen_martell_slide
+  house_select_targaryen_baratheon_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_targaryen_sigil
+        sigil_color1: blue
+        sigil_light2: l_baratheon_sigil
+        sigil_color2: yellow
+        selection_slide: targaryen_baratheon_slide
+  house_select_targaryen_tyrell_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_targaryen_sigil
+        sigil_color1: blue
+        sigil_light2: l_tyrell_sigil
+        sigil_color2: green
+        selection_slide: targaryen_tyrell_slide
+  house_select_targaryen_lannister_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_targaryen_sigil
+        sigil_color1: blue
+        sigil_light2: l_lannister_sigil
+        sigil_color2: red
+        selection_slide: targaryen_lannister_slide
+  house_select_targaryen_stark_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_targaryen_sigil
+        sigil_color1: blue
+        sigil_light2: l_stark_sigil
+        sigil_color2: white
+        selection_slide: targaryen_stark_slide
+  house_select_targaryen_greyjoy_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_targaryen_sigil
+        sigil_color1: blue
+        sigil_light2: l_greyjoy_sigil
+        sigil_color2: purple
+        selection_slide: targaryen_greyjoy_slide
+  house_select_martell_baratheon_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_martell_sigil
+        sigil_color1: orange
+        sigil_light2: l_baratheon_sigil
+        sigil_color2: yellow
+        selection_slide: martell_baratheon_slide
+  house_select_martell_tyrell_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_martell_sigil
+        sigil_color1: orange
+        sigil_light2: l_tyrell_sigil
+        sigil_color2: green
+        selection_slide: martell_tyrell_slide
+  house_select_martell_lannister_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_martell_sigil
+        sigil_color1: orange
+        sigil_light2: l_lannister_sigil
+        sigil_color2: red
+        selection_slide: martell_lannister_slide
+  house_select_martell_stark_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_martell_sigil
+        sigil_color1: orange
+        sigil_light2: l_stark_sigil
+        sigil_color2: white
+        selection_slide: martell_stark_slide
+  house_select_martell_greyjoy_highlighted:
+    dual_selection_show:
+      key: abc
+      show_tokens:
+        sigil_light1: l_martell_sigil
+        sigil_color1: orange
+        sigil_light2: l_greyjoy_sigil
+        sigil_color2: purple
+        selection_slide: martell_greyjoy_slide
+  house_select_baratheon_tyrell_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_baratheon_sigil
+        sigil_color1: yellow
+        sigil_light2: l_tyrell_sigil
+        sigil_color2: green
+        selection_slide: baratheon_tyrell_slide
+  house_select_baratheon_lannister_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_baratheon_sigil
+        sigil_color1: yellow
+        sigil_light2: l_lannister_sigil
+        sigil_color2: red
+        selection_slide: baratheon_lannister_slide
+  house_select_baratheon_stark_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_baratheon_sigil
+        sigil_color1: yellow
+        sigil_light2: l_stark_sigil
+        sigil_color2: white
+        selection_slide: baratheon_stark_slide
+  house_select_baratheon_greyjoy_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_baratheon_sigil
+        sigil_color1: yellow
+        sigil_light2: l_greyjoy_sigil
+        sigil_color2: purple
+        selection_slide: baratheon_greyjoy_slide
+  house_select_tyrell_lannister_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_tyrell_sigil
+        sigil_color1: green
+        sigil_light2: l_lannister_sigil
+        sigil_color2: red
+        selection_slide: tyrell_lannister_slide
+  house_select_tyrell_stark_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_tyrell_sigil
+        sigil_color1: green
+        sigil_light2: l_stark_sigil
+        sigil_color2: white
+        selection_slide: tyrell_stark_slide
+  house_select_tyrell_greyjoy_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_tyrell_sigil
+        sigil_color1: green
+        sigil_light2: l_greyjoy_sigil
+        sigil_color2: purple
+        selection_slide: tyrell_greyjoy_slide
+  house_select_lannister_stark_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_lannister_sigil
+        sigil_color1: red
+        sigil_light2: l_stark_sigil
+        sigil_color2: white
+        selection_slide: lannister_stark_slide
+  house_select_lannister_greyjoy_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_lannister_sigil
+        sigil_color1: red
+        sigil_light2: l_greyjoy_sigil
+        sigil_color2: purple
+        selection_slide: lannister_greyjoy_slide
+  house_select_stark_greyjoy_highlighted:
+    dual_selection_show:
+      show_tokens:
+        sigil_light1: l_stark_sigil
+        sigil_color1: white
+        sigil_light2: l_greyjoy_sigil
+        sigil_color2: purple
+        selection_slide: stark_greyjoy_slide
+  house_select_pass_for_now_highlighted:
+    pass_for_now_show:
+      key: abc
+
+shows:
+  single_selection_show:
+    - time: 0
+      lights:
+        (sigil_light): (sigil_color)
+      slides:
+        (selection_slide)
+    - duration: -1
+  dual_selection_show:
+    - time: 0
+      lights:
+        (sigil_light1): (sigil_color1)
+        (sigil_light2): (sigil_color2)
+      slides:
+        (selection_slide)
+    - duration: -1
+  pass_for_now_show:
+    - time: 0
+      slides:
+        pass_for_now_slide
+    - duration: -1
+
+slides:
+  targaryen_slide:
+    type: text
+    text: House Targaryen
+  martell_slide:
+    type: text
+    text: House Martell
+  baratheon_slide:
+    type: text
+    text: House Baratheon
+  tyrell_slide:
+    type: text
+    text: House Tyrell
+  lannister_slide:
+    type: text
+    text: House Lannister
+  stark_slide:
+    type: text
+    text: House Stark
+  greyjoy_slide:
+    type: text
+    text: House Greyjoy
+  targaryen_martell_slide:
+    - type: text
+      text: House Targaryen
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Martell
+  targaryen_baratheon_slide:
+    - type: text
+      text: House Targaryen
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Baratheon
+  targaryen_tyrell_slide:
+    - type: text
+      text: House Targaryen
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Tyrell
+  targaryen_lannister_slide:
+    - type: text
+      text: House Targaryen
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Lannister
+  targaryen_stark_slide:
+    - type: text
+      text: House Targaryen
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Stark
+  targaryen_greyjoy_slide:
+    - type: text
+      text: House Targaryen
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Greyjoy
+  martell_baratheon_slide:
+    - type: text
+      text: House Martell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Baratheon
+  martell_tyrell_slide:
+    - type: text
+      text: House Martell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Tyrell
+  martell_lannister_slide:
+    - type: text
+      text: House Martell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Lannister
+  martell_stark_slide:
+    - type: text
+      text: House Martell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Stark
+  martell_greyjoy_slide:
+    - type: text
+      text: House Martell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Greyjoy
+  baratheon_tyrell_slide:
+    - type: text
+      text: House Baratheon
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Tyrell
+  baratheon_lannister_slide:
+    - type: text
+      text: House Baratheon
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Lannister
+  baratheon_stark_slide:
+    - type: text
+      text: House Baratheon
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Stark
+  baratheon_greyjoy_slide:
+    - type: text
+      text: House Baratheon
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Greyjoy
+  tyrell_lannister_slide:
+    - type: text
+      text: House Tyrell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Lannister
+  tyrell_stark_slide:
+    - type: text
+      text: House Tyrell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Stark
+  tyrell_greyjoy_slide:
+    - type: text
+      text: House Tyrell
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Greyjoy
+  lannister_stark_slide:
+    - type: text
+      text: House Lannister
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Stark
+  lannister_greyjoy_slide:
+    - type: text
+      text: House Lannister
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Greyjoy
+  stark_greyjoy_slide:
+    - type: text
+      text: House Stark
+    - type: text
+      text: "- in alliance with -"
+    - type: text
+      text: House Greyjoy
+  pass_for_now_slide:
+    type: text
+    text: Pass For Now
+
+event_player:
+  house_select_targaryen_selected: start_targaryen, house_started
+  house_select_martell_selected: start_martell, house_started
+  house_select_baratheon_selected: start_baratheon, house_started
+  house_select_tyrell_selected: start_tyrell, house_started
+  house_select_lannister_selected: start_lannister, house_started
+  house_select_stark_selected: start_stark, house_started
+  house_select_greyjoy_selected: start_greyjoy, house_started
+  house_select_targaryen_martell_selected: start_targaryen, start_martell, house_started
+  house_select_targaryen_baratheon_selected: start_targaryen, start_baratheon, house_started
+  house_select_targaryen_tyrell_selected: start_targaryen, start_tyrell, house_started
+  house_select_targaryen_lannister_selected: start_targaryen, start_lannister, house_started
+  house_select_targaryen_stark_selected: start_targaryen, start_stark, house_started
+  house_select_targaryen_greyjoy_selected: start_targaryen, start_greyjoy, house_started
+  house_select_martell_baratheon_selected: start_martell, start_baratheon, house_started
+  house_select_martell_tyrell_selected: start_martell, start_tyrell, house_started
+  house_select_martell_lannister_selected: start_martell, start_lannister, house_started
+  house_select_martell_stark_selected: start_martell, start_stark, house_started
+  house_select_martell_greyjoy_selected: start_martell, start_greyjoy, house_started
+  house_select_baratheon_tyrell_selected: start_baratheon, start_tyrell, house_started
+  house_select_baratheon_lannister_selected: start_baratheon, start_lannister, house_started
+  house_select_baratheon_stark_selected: start_baratheon, start_stark, house_started
+  house_select_baratheon_greyjoy_selected: start_baratheon, start_greyjoy, house_started
+  house_select_tyrell_lannister_selected: start_tyrell, start_lannister, house_started
+  house_select_tyrell_stark_selected: start_tyrell, start_stark, house_started
+  house_select_tyrell_greyjoy_selected: start_tyrell, start_greyjoy, house_started
+  house_select_lannister_stark_selected: start_lannister, start_stark, house_started
+  house_select_lannister_greyjoy_selected: start_lannister, start_greyjoy, house_started
+  house_select_stark_greyjoy_selected: start_stark, start_greyjoy, house_started
+  house_select_pass_for_now_selected: house_select_cancelled
