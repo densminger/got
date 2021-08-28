@@ -11,6 +11,8 @@ event_player:
     - house_not_ready
   house_completed{device.achievements.stark.state=="enabled" or device.achievements.martell.state=="enabled" or device.achievements.tyrell.state=="enabled" or device.achievements.targaryen.state=="enabled" or device.achievements.lannister.state=="enabled" or device.achievements.baratheon.state=="enabled" or device.achievements.greyjoy.state=="enabled"}:
     - house_ready
+  house_select_cancelled{device.achievements.stark.state=="enabled" or device.achievements.martell.state=="enabled" or device.achievements.tyrell.state=="enabled" or device.achievements.targaryen.state=="enabled" or device.achievements.lannister.state=="enabled" or device.achievements.baratheon.state=="enabled" or device.achievements.greyjoy.state=="enabled"}:
+    - house_ready
 
 achievements:
   stark:
@@ -127,25 +129,59 @@ achievements:
     start_enabled: false
 
 show_player:
-  house_ready:
+  house_ready{current_player.house_running_count==0}:
     flash_sync_color:
-      action: play
       sync_ms: 1000
       show_tokens:
         light: l_choose_your_battle
         color: white
   house_not_ready:
-    flash_sync_color:
+    off:
       show_tokens:
         light: l_choose_your_battle
-        color: off
-
-# variable_player:
-#   house_ready:
-#     house_is_ready:
-#       action: set
-#       string: true
-#   house_not_ready:
-#     house_is_ready:
-#       action: set
-#       string: false
+  house_started:
+    off:
+      key: turn_off_lights
+      show_tokens:
+        lights: house_sigils, shot_sigils
+  player_house_running_count{value==0}:
+    led_color:
+      key: turn_off_lights
+      show_tokens:
+        lights: house_sigils, shot_sigils
+        color: stop
+  martell_completed:
+    led_color:
+      show_tokens:
+        light: l_martell_sigil
+        color: orange
+  tyrell_completed:
+    led_color:
+      show_tokens:
+        light: l_tyrell_sigil
+        color: green
+  greyjoy_completed:
+    led_color:
+      show_tokens:
+        light: l_greyjoy_sigil
+        color: purple
+  lannister_completed:
+    led_color:
+      show_tokens:
+        light: l_lannister_sigil
+        color: red
+  baratheon_completed:
+    led_color:
+      show_tokens:
+        light: l_baratheon_sigil
+        color: yellow
+  targaryen_completed:
+    led_color:
+      show_tokens:
+        light: l_targaryen_sigil
+        color: blue
+  stark_completed:
+    led_color:
+      show_tokens:
+        light: l_stark_sigil
+        color: white

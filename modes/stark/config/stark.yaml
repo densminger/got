@@ -10,7 +10,10 @@ mode:
 event_player:
   mode_stark_started: stop_stark
 
-light_player:
+show_player:
   mode_stark_started:
-    shot_sigils: off
-    house_sigils: off
+    flash_sync_color:
+      sync_ms: 1000
+      show_tokens:
+        light: l_stark_sigil
+        color: white

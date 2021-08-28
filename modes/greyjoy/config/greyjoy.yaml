@@ -15,7 +15,10 @@ counters:
     events_when_complete: stop_greyjoy
     start_enabled: true
 
-light_player:
+show_player:
   mode_greyjoy_started:
-    shot_sigils: off
-    house_sigils: off
+    flash_sync_color:
+      sync_ms: 1000
+      show_tokens:
+        light: l_greyjoy_sigil
+        color: purple

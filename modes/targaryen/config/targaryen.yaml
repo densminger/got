@@ -14,3 +14,10 @@ light_player:
   mode_targaryen_started:
     shot_sigils: off
     house_sigils: off
+
+show_player:
+  mode_targaryen_started:
+    flash_sync_color:
+      show_tokens:
+        light: l_targaryen_sigil
+        color: blue
