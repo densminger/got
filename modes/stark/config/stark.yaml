@@ -7,8 +7,13 @@ mode:
   events_when_stopped: stark_completed, house_completed
   priority: 300
 
-event_player:
-  mode_stark_started: stop_stark
+counters:
+  # temporary counter for testing
+  debug_stark_slingshot_counter:
+    count_events: s_left_inlane_active
+    count_complete_value: 3
+    events_when_complete: stop_stark
+    start_enabled: true
 
 show_player:
   mode_stark_started:
@@ -17,3 +22,4 @@ show_player:
       show_tokens:
         light: l_stark_sigil
         color: white
+
