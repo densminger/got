@@ -45,6 +45,7 @@ light_player:
   mode_house_select_started:
     house_sigils: off
     l_choose_your_battle: off
+    gi: off
 
 show_player:
   house_select_targaryen_highlighted:

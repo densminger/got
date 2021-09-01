@@ -1,5 +1,8 @@
 #config_version=5
 
+mpf:
+  report_crashes: never
+
 blinkenlights:
   my_blinkenlight:
     color_duration: 1s

@@ -7,9 +7,11 @@ mode:
   events_when_stopped: house_completed, martell_completed
   priority: 300
 
-event_player:
-  s_left_loop_active: add_time, loop_shot
-  s_right_loop_active: add_time, loop_shot
+shots:
+  shot_any_loop:
+    switches: s_left_loop, s_right_loop
+  shot_any_ramp:
+    switches: s_left_ramp_exit, s_right_ramp_exit
 
 timers:
   martell_timer:
@@ -45,24 +47,77 @@ show_player:
       show_tokens:
         light: l_martell_sigil
         color: orange
-  loop_shot_hit:
+  martell_progress:
     flash_sync_color:
       speed: 6
       loops: 6
       show_tokens:
         light: gi, shot_sigils
-        color: white
+        color: orange
+  martell_objectives_complete:
+    flash_sync_color:
+      block_queue: true
+      speed: 6
+      loops: 6
+      show_tokens:
+        light: gi, shot_sigils
+        color: orange
+  martell_objectives_failed:
+    failed_show:
+      block_queue: true
+      loops: 0
+
+shows:
+  failed_show:
+    - duration: 3s
+      slides: failed_slide
+
+slides:
+  failed_slide:
+    - type: text
+      text: "You failed!"
 
 blinkenlight_player:
   mode_martell_started:
     bl_left_loop_sigil: orange
     bl_right_loop_sigil: orange
+  martell_loops_done:
+    bl_left_loop_sigil: stop
+    bl_right_loop_sigil: stop
+    bl_left_ramp_sigil: orange
+    bl_right_ramp_sigil: orange
+  timer_martell_timer_complete:
+    bl_left_loop_sigil: stop
+    bl_right_loop_sigil: stop
+    bl_left_ramp_sigil: stop
+    bl_right_ramp_sigil: stop
+
+queue_event_player:
+  martell_ramps_done:
+    queue_event: martell_objectives_complete
+    events_when_finished: stop_martell
+  timer_martell_timer_complete:
+    queue_event: martell_objectives_failed
+    events_when_finished: stop_martell
 
 counters:
   martell_loop_shot_counter:
-    count_events: loop_shot
-    events_when_hit: loop_shot_hit
+    count_events: shot_any_loop_hit
+    events_when_hit: martell_progress
     count_complete_value: 3
-    events_when_complete: stop_martell
-    persist_state: true
+    events_when_complete: martell_loops_done
+    persist_state: false
+    disable_on_complete: true
+    disable_events: timer_martell_timer_complete
     enable_events: mode_martell_started
+  martell_ramp_counter:
+    count_events: shot_any_ramp_hit
+    events_when_hit: martell_progress
+    count_complete_value: 1
+    events_when_complete: martell_ramps_done
+    persist_state: false
+    disable_on_complete: true
+    disable_events: timer_martell_timer_complete
+    enable_events: martell_loops_done
+
+# TODO: On failure of the mode, the house_achievements mode should not mark this mode as "complete", but it should reset back to "enabled"
