@@ -7,21 +7,62 @@ mode:
   events_when_stopped: house_completed, martell_completed
   priority: 300
 
-# event_player:
-#   mode_martell_started: stop_martell
+event_player:
+  s_left_loop_active: add_time, loop_shot
+  s_right_loop_active: add_time, loop_shot
 
-counters:
-  # temporary counter for testing
-  debug_martell_slingshot_counter:
-    count_events: s_right_slingshot_active
-    count_complete_value: 3
-    events_when_complete: stop_martell
-    start_enabled: true
+timers:
+  martell_timer:
+    direction: down
+    start_value: 60
+    tick_interval: 0.5s
+    control_events:
+      - event: set_timer_to_13_secs{device.timers.martell_timer.ticks<26}
+        action: jump
+        value: 26
+      - event: add_time{device.timers.martell_timer.ticks>50}
+        action: jump
+        value: 60
+      - event: add_time{device.timers.martell_timer.ticks<=50}
+        action: add
+        value: 10
+      - event: mode_martell_started
+        action: start
+      - event: pause_timer
+        action: pause
+      - event: resume_timer
+        action: start
+    start_running: false
+
+light_player:
+  mode_martell_started:
+    l_choose_your_battle: off
 
 show_player:
   mode_martell_started:
     flash_sync_color:
-      sync_ms: 1000
+      sync_ms: 340
       show_tokens:
         light: l_martell_sigil
         color: orange
+  loop_shot_hit:
+    flash_sync_color:
+      speed: 6
+      loops: 6
+      show_tokens:
+        light: gi, shot_sigils
+        color: white
+
+blinkenlight_player:
+  mode_martell_started:
+    bl_left_loop_sigil: orange
+    bl_right_loop_sigil: orange
+
+counters:
+  martell_loop_shot_counter:
+    count_events: loop_shot
+    events_when_hit: loop_shot_hit
+    count_complete_value: 3
+    events_when_complete: stop_martell
+    persist_state: true
+    enable_events: mode_martell_started

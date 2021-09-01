@@ -88,15 +88,42 @@ event_player:
   house_started: stop_qualifiers
   player_house_running_count{value==0}: start_qualifiers
 
+  # testing
+  test_event_1:
+    - s_lockdown_button_active|0
+    - s_lockdown_button_inactive|1
+    # qualify martell
+    - start_mode_martell_qualifier|2  # we need this for martell, since the mode doesn't usually start until the playfield has a ball (because the switch for right loop is at the top of the launcher lane)
+    - s_right_loop_active|100
+    - s_right_loop_inactive|101
+    - s_right_loop_active|102
+    - s_right_loop_inactive|103
+    - s_right_loop_active|104
+    - s_right_loop_inactive|105
+    # qualify greyjoy
+    - s_left_loop_active|106
+    - s_left_loop_inactive|107
+    - s_left_loop_active|108
+    - s_left_loop_inactive|109
+    - s_left_loop_active|110
+    - s_left_loop_inactive|111
+    # qualify stark
+    - s_right_ramp_exit_active|112
+    - s_right_ramp_exit_inactive|113
+    - s_right_ramp_exit_active|114
+    - s_right_ramp_exit_inactive|115
+    - s_right_ramp_exit_active|116
+    - s_right_ramp_exit_inactive|117
+
 shows:
   flash_sync_color:
     - time: 0
       lights:
         (light): (color)
-    - time: 0.5
+    - time: 0.17
       lights:
         (light): off
-    - time: 1
+    - time: 0.34
 
 shots:
   shot_pop_bumper:

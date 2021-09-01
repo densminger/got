@@ -7,6 +7,10 @@ mode:
   events_when_stopped: greyjoy_completed, house_completed
   priority: 300
 
+light_player:
+  mode_greyjoy_started:
+    l_choose_your_battle: off
+
 counters:
   # temporary counter for testing
   debug_greyjoy_slingshot_counter:
@@ -18,7 +22,15 @@ counters:
 show_player:
   mode_greyjoy_started:
     flash_sync_color:
-      sync_ms: 1000
+      sync_ms: 340
       show_tokens:
         light: l_greyjoy_sigil
         color: purple
+
+blinkenlight_player:
+  mode_greyjoy_started:
+    bl_left_loop_sigil: purple
+    bl_right_loop_sigil: purple
+    bl_kickback_sigil: purple
+    bl_left_ramp_sigil: purple
+    bl_right_ramp_sigil: purple

@@ -12,8 +12,7 @@ event_player:
 
 light_player:
   mode_targaryen_started:
-    shot_sigils: off
-    house_sigils: off
+    l_choose_your_battle: off
 
 show_player:
   mode_targaryen_started:

@@ -7,19 +7,23 @@ mode:
 event_player:
   mode_house_achievements_started:
     - start_qualifiers
-  house_started{device.achievements.stark.state!="enabled" and device.achievements.martell.state!="enabled" and device.achievements.tyrell.state!="enabled" and device.achievements.targaryen.state!="enabled" and device.achievements.lannister.state!="enabled" and device.achievements.baratheon.state!="enabled" and device.achievements.greyjoy.state!="enabled"}:
+  house_started:
     - house_not_ready
   house_completed{device.achievements.stark.state=="enabled" or device.achievements.martell.state=="enabled" or device.achievements.tyrell.state=="enabled" or device.achievements.targaryen.state=="enabled" or device.achievements.lannister.state=="enabled" or device.achievements.baratheon.state=="enabled" or device.achievements.greyjoy.state=="enabled"}:
     - house_ready
-  house_select_cancelled{device.achievements.stark.state=="enabled" or device.achievements.martell.state=="enabled" or device.achievements.tyrell.state=="enabled" or device.achievements.targaryen.state=="enabled" or device.achievements.lannister.state=="enabled" or device.achievements.baratheon.state=="enabled" or device.achievements.greyjoy.state=="enabled"}:
+  mode_house_achievements_started{device.achievements.stark.state=="enabled" or device.achievements.martell.state=="enabled" or device.achievements.tyrell.state=="enabled" or device.achievements.targaryen.state=="enabled" or device.achievements.lannister.state=="enabled" or device.achievements.baratheon.state=="enabled" or device.achievements.greyjoy.state=="enabled"}:
     - house_ready
+  house_select_cancelled:
+    - house_not_ready
+  house_completed{not (device.achievements.stark.state=="enabled" or device.achievements.martell.state=="enabled" or device.achievements.tyrell.state=="enabled" or device.achievements.targaryen.state=="enabled" or device.achievements.lannister.state=="enabled" or device.achievements.baratheon.state=="enabled" or device.achievements.greyjoy.state=="enabled")}:
+    - house_not_ready
 
 achievements:
   stark:
     show_tokens:
       light: l_stark_sigil
       color: white
-    sync_ms: 1000
+    sync_ms: 340
     enable_events: stark_qualified
     show_when_enabled: flash_sync_color
     events_when_enabled: house_ready
@@ -35,7 +39,7 @@ achievements:
     show_tokens:
       light: l_lannister_sigil
       color: red
-    sync_ms: 1000
+    sync_ms: 340
     enable_events: lannister_qualified
     show_when_enabled: flash_sync_color
     events_when_enabled: house_ready
@@ -51,7 +55,7 @@ achievements:
     show_tokens:
       light: l_baratheon_sigil
       color: yellow
-    sync_ms: 1000
+    sync_ms: 340
     enable_events: baratheon_qualified
     show_when_enabled: flash_sync_color
     events_when_enabled: house_ready
@@ -67,7 +71,7 @@ achievements:
     show_tokens:
       light: l_tyrell_sigil
       color: green
-    sync_ms: 1000
+    sync_ms: 340
     enable_events: tyrell_qualified
     show_when_enabled: flash_sync_color
     events_when_enabled: house_ready
@@ -83,7 +87,7 @@ achievements:
     show_tokens:
       light: l_greyjoy_sigil
       color: purple
-    sync_ms: 1000
+    sync_ms: 340
     enable_events: greyjoy_qualified
     show_when_enabled: flash_sync_color
     events_when_enabled: house_ready
@@ -99,7 +103,7 @@ achievements:
     show_tokens:
       light: l_martell_sigil
       color: orange
-    sync_ms: 1000
+    sync_ms: 340
     enable_events: martell_qualified
     show_when_enabled: flash_sync_color
     events_when_enabled: house_ready
@@ -115,7 +119,7 @@ achievements:
     show_tokens:
       light: l_targaryen_sigil
       color: blue
-    sync_ms: 1000
+    sync_ms: 340
     enable_events: targaryen_qualified
     show_when_enabled: flash_sync_color
     events_when_enabled: house_ready
@@ -129,27 +133,30 @@ achievements:
     start_enabled: false
 
 show_player:
-  house_ready{current_player.house_running_count==0}:
+  house_ready:
     flash_sync_color:
-      sync_ms: 1000
+      key: choose_battle
+      sync_ms: 340
       show_tokens:
         light: l_choose_your_battle
         color: white
   house_not_ready:
     off:
+      key: choose_battle
       show_tokens:
         light: l_choose_your_battle
+
+  # blank the house_sigils, shot_sigils (including the choose your battle light) when a house starts
   house_started:
     off:
-      key: turn_off_lights
+      key: house_started_blanker
       show_tokens:
         lights: house_sigils, shot_sigils
+  # un-blank the lights once there's no more house mode running
   player_house_running_count{value==0}:
-    led_color:
-      key: turn_off_lights
-      show_tokens:
-        lights: house_sigils, shot_sigils
-        color: stop
+    house_started_blanker:
+      action: stop
+
   martell_completed:
     led_color:
       show_tokens:

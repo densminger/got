@@ -628,7 +628,6 @@ lights:
         number: 10-23
       blue:
         number: 10-24
-    tags: shot_sigils
   l_lock_arrow:
     channels:
       red:
@@ -1171,3 +1170,32 @@ keyboard:
 
 virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
+blinkenlights:
+  bl_left_loop_sigil:
+    color_duration: 0.17s
+    light: l_left_loop_sigil
+    priority: 300
+  bl_right_loop_sigil:
+    color_duration: 0.17s
+    light: l_right_loop_sigil
+    priority: 300
+  bl_left_ramp_sigil:
+    color_duration: 0.17s
+    light: l_left_ramp_sigil
+    priority: 300
+  bl_right_ramp_sigil:
+    color_duration: 0.17s
+    light: l_right_ramp_sigil
+    priority: 300
+  bl_3bank_sigil:
+    color_duration: 0.17s
+    light: l_3bank_sigil
+    priority: 300
+  bl_2bank_sigil:
+    color_duration: 0.17s
+    light: l_2bank_sigil
+    priority: 300
+  bl_kickback_sigil:
+    color_duration: 0.17s
+    light: l_kickback_sigil
+    priority: 300

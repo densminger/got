@@ -15,11 +15,18 @@ counters:
     events_when_complete: stop_stark
     start_enabled: true
 
+light_player:
+  mode_stark_started:
+    l_choose_your_battle: off
+
 show_player:
   mode_stark_started:
     flash_sync_color:
-      sync_ms: 1000
+      sync_ms: 340
       show_tokens:
         light: l_stark_sigil
         color: white
 
+blinkenlight_player:
+  mode_stark_started:
+    bl_right_ramp_sigil: white
